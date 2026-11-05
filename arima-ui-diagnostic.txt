@@ -1,0 +1,298 @@
+﻿
+========================================
+FILE: C:\Users\DELL\Desktop\arima\arima frontend\index.html
+========================================
+
+--- PAGE STRUCTURE ---
+<header class="site-header" id="siteHeader">
+<div class="container navbar">
+<div class="nav-right" id="navMenu">
+<div class="nav-actions">
+<section class="hero" id="home">
+<div class="hero-wave">
+<div class="hero-wave wave-2">
+<div class="container hero-layout">
+<div class="hero-copy">
+<div class="hero-eyebrow reveal">
+<div class="hero-buttons reveal" data-delay="300">
+<div class="hero-highlights reveal" data-delay="400">
+<div class="hero-highlight">
+<div class="hero-highlight-icon">
+<div class="hero-highlight">
+<div class="hero-highlight-icon">
+<div class="hero-highlight">
+<div class="hero-highlight-icon">
+<div class="hero-visual reveal-right">
+<div class="hero-image-shell">
+<div class="water-orb">
+<div class="molecule mol-1">
+<div class="molecule mol-2">
+<div class="molecule mol-3">
+<section class="section" id="about">
+<div class="container">
+<div class="about-layout">
+<div class="about-image reveal-left">
+<div class="about-logo-badge">
+<div class="about-content">
+<div class="eyebrow reveal">
+<div class="stats reveal" data-delay="300">
+<div class="stat">
+<div class="stat-number counter" data-target="10" data-suffix="+">
+<div class="stat-label">
+<div class="stat">
+<div class="stat-number counter" data-target="500" data-suffix="+">
+<div class="stat-label">
+<div class="stat">
+<div class="stat-number counter" data-target="100" data-suffix="+">
+<div class="stat-label">
+<div class="stat">
+<div class="stat-number counter" data-target="20" data-suffix="+">
+<div class="stat-label">
+<div class="about-features">
+<div class="about-feature reveal" data-delay="100">
+<div class="about-feature-icon">
+<div class="about-feature reveal" data-delay="200">
+<div class="about-feature-icon">
+<div class="about-feature reveal" data-delay="300">
+<div class="about-feature-icon">
+<div class="about-feature reveal" data-delay="400">
+<div class="about-feature-icon">
+<section class="section section-soft" id="products">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">
+<div class="products-grid">
+<div class="product-image">
+<div class="product-body">
+<div class="product-image">
+<div class="product-body">
+<div class="product-image">
+<div class="product-body">
+<div class="product-image">
+<div class="product-body">
+<section class="section" id="applications">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">
+<div class="applications-grid">
+<div class="application-image">
+<div class="application-body">
+<div class="app-arrow">
+<div class="application-image">
+<div class="application-body">
+<div class="app-arrow">
+<div class="application-image">
+<div class="application-body">
+<div class="app-arrow">
+<div class="application-image">
+<div class="application-body">
+<div class="app-arrow">
+<div class="application-image">
+<div class="application-body">
+<div class="app-arrow">
+<section class="section section-soft" id="industries">
+<div class="container">
+<div class="why-layout">
+<div class="reveal-left">
+
+--- HEADINGS ---
+Precision Chemical Solutions for Water, Industry & Performance
+Delivering Trusted Chemical Solutions for a Better Tomorrow.
+Quality Focused
+Technical Expertise
+Responsible Solutions
+Customer Support
+High-Performance Chemical Products.
+Water Treatment Chemicals
+Industrial Chemicals
+Cleaning & Maintenance
+Specialty Chemicals
+Versatile Solutions for Multiple Applications.
+Swimming Pool Water Treatment
+Septic Tank Treatment
+Water Treatment
+Industrial Applications
+Cleaning & Maintenance
+Our Commitment Creates Real Value.
+Premium Quality
+Technical Expertise
+Reliable Solutions
+Application-Specific Dosage
+Professional Support
+Consistent Results
+Chemical Dosage Calculator
+Let's Build a Cleaner, Healthier Tomorrow Together.
+Send Us a Message
+Company
+Solutions
+Need the right chemical dosage?
+
+--- NAVIGATION LINKS ---
+<a href="#home" class="brand-logo"> <!-- IMPORTANT: Save your original Arima logo as: assets/images/arima-logo.png --> <img src="assets/images/arima-logo.png" alt="Arima Chemical"> </a>
+<a href="#home" class="nav-link active"> Home </a>
+<a href="#products" class="nav-link"> Products </a>
+<a href="#products" class="btn btn-primary"> Explore Solutions <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="#products" class="section-link"> View All Products <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="#applications" class="product-link"> Learn More <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="#applications" class="product-link"> Learn More <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="#applications" class="product-link"> Learn More <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="#applications" class="product-link"> Learn More <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="#home" class="arima-footer-logo"> <img src="assets/images/arima-logo.png" alt="Arima Chemical"> </a>
+<a href="#home"> <span>Home</span> <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="#products"> <span>Products</span> <i class="fa-solid fa-arrow-right"></i> </a>
+
+--- LOADED STYLES AND SCRIPTS ---
+<link rel="stylesheet" href="assets/css/arima-logo-adjust.css?v=1">
+<link rel="stylesheet" href="assets/css/arima-premium-products.css?v=20261014-pages3">
+<link rel="stylesheet" href="assets/css/arima-premium-v6.css?v=6">
+<script defer src="assets/js/arima-premium-products.js?v=20261014-pages3">
+<script defer src="assets/js/arima-premium-v6.js?v=6">
+
+--- V6 CHECK ---
+V6 CSS referenced: True
+V6 JS referenced: True
+Old V5 JS referenced: False
+
+========================================
+FILE: C:\Users\DELL\Desktop\arima\arima frontend\products.html
+========================================
+
+--- PAGE STRUCTURE ---
+<header class="site-header" id="siteHeader">
+<div class="container navbar">
+<div class="nav-right" id="navMenu">
+<div class="nav-actions">
+<main id="arima-catalog-root">
+<footer class="arima-pro-footer">
+<div class="arima-footer-glow glow-one">
+<div class="arima-footer-glow glow-two">
+<div class="container arima-footer-main">
+<div class="arima-footer-brand">
+<div class="arima-footer-socials">
+<div class="arima-footer-column">
+<div class="arima-footer-column">
+<div class="arima-footer-cta">
+<div class="container arima-footer-contact-strip">
+<div class="arima-footer-contact-item">
+<div class="arima-footer-contact-item">
+<div class="arima-footer-contact-item">
+<div class="arima-footer-bottom">
+<div class="container arima-footer-bottom-inner">
+
+--- HEADINGS ---
+Company
+Solutions
+Need the right chemical dosage?
+
+--- NAVIGATION LINKS ---
+<a href="index.html#home" class="brand-logo"> <!-- IMPORTANT: Save your original Arima logo as: assets/images/arima-logo.png --> <img src="assets/images/arima-logo.png" alt="Arima Chemical"> </a>
+<a href="index.html#home" class="nav-link active"> Home </a>
+<a href="index.html#products" class="nav-link"> Products </a>
+<a href="index.html#home" class="arima-footer-logo"> <img src="assets/images/arima-logo.png" alt="Arima Chemical"> </a>
+<a href="index.html#home"> <span>Home</span> <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="index.html#products"> <span>Products</span> <i class="fa-solid fa-arrow-right"></i> </a>
+
+--- LOADED STYLES AND SCRIPTS ---
+<link rel="icon" href="assets/images/arima-logo.png">
+<link rel="stylesheet" href="assets/css/arima-logo-adjust.css?v=1">
+<link rel="stylesheet" href="assets/css/arima-premium-products.css?v=20261014-pages3">
+<link rel="stylesheet" href="assets/css/arima-products-luxury.css?v=20261014-v4">
+<link rel="stylesheet" href="assets/css/arima-products-v5.css?v=5">
+<link rel="stylesheet" href="assets/css/arima-premium-v6.css?v=6">
+<script defer src="assets/js/arima-premium-products.js?v=20261014-pages3">
+<script defer src="assets/js/arima-products-luxury.js?v=20261014-v4">
+<script defer src="assets/js/arima-products-v5.js?v=5">
+<script defer src="assets/js/arima-premium-v6.js?v=6">
+
+--- V6 CHECK ---
+V6 CSS referenced: True
+V6 JS referenced: True
+Old V5 JS referenced: True
+
+========================================
+FILE: C:\Users\DELL\Desktop\arima\arima frontend\product-pages\industrial-chemicals--ethyl-acetate.html
+========================================
+
+--- PAGE STRUCTURE ---
+<header class="site-header" id="siteHeader">
+<div class="container navbar">
+<div class="nav-right" id="navMenu">
+<div class="nav-actions">
+<main class="apd-page" id="arima-product-detail-root">
+<div class="apd-breadcrumb-wrap">
+<nav class="apd-breadcrumb" aria-label="Breadcrumb">
+<section class="apd-hero">
+<div class="apd-container apd-hero-grid">
+<div class="apd-copy">
+<div class="apd-chiprow">
+<div class="apd-actions">
+<div class="apd-art apd-art-industrial" role="img" aria-label="Illustration for Ethyl Acetate">
+<section class="apd-info">
+<div class="apd-container apd-info-grid">
+<div class="apd-info-row">
+<div class="apd-info-row">
+<div class="apd-info-row">
+<div class="apd-info-row">
+<div class="apd-note">
+<section class="apd-related">
+<div class="apd-container">
+<div class="apd-related-head">
+<div class="apd-related-grid">
+<footer class="arima-pro-footer">
+<div class="arima-footer-glow glow-one">
+<div class="arima-footer-glow glow-two">
+<div class="container arima-footer-main">
+<div class="arima-footer-brand">
+<div class="arima-footer-socials">
+<div class="arima-footer-column">
+<div class="arima-footer-column">
+<div class="arima-footer-cta">
+<div class="container arima-footer-contact-strip">
+<div class="arima-footer-contact-item">
+<div class="arima-footer-contact-item">
+<div class="arima-footer-contact-item">
+<div class="arima-footer-bottom">
+<div class="container arima-footer-bottom-inner">
+
+--- HEADINGS ---
+Ethyl Acetate .
+Product overview
+Product information
+Related products
+Company
+Solutions
+Need the right chemical dosage?
+
+--- NAVIGATION LINKS ---
+<a href="index.html#home" class="brand-logo"> <!-- IMPORTANT: Save your original Arima logo as: assets/images/arima-logo.png --> <img src="assets/images/arima-logo.png" alt="Arima Chemical"> </a>
+<a href="index.html#home" class="nav-link active"> Home </a>
+<a href="index.html#products" class="nav-link"> Products </a>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="products.html?category=industrial">Industrial Chemicals</a>
+<a class="apd-primary" href="index.html#contact">Enquire about this product <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+<a class="apd-secondary" href="products.html?category=industrial">Browse category <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+<a href="products.html?category=industrial">View category <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+<a class="apd-related-card" href="product-pages/industrial-chemicals--isopropyl-alcohol.html"><span class="apd-related-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v7l-5.8 9a2 2 0 0 0 1.7 3h12.2a2 2 0 0 0 1.7-3L14 10V3"/><path d="M7 16h10"/></svg></span><span><strong>Isopropyl Alcohol</strong><small>Industrial Chemicals</small></span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+<a class="apd-related-card" href="product-pages/industrial-chemicals--acetone.html"><span class="apd-related-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v7l-5.8 9a2 2 0 0 0 1.7 3h12.2a2 2 0 0 0 1.7-3L14 10V3"/><path d="M7 16h10"/></svg></span><span><strong>Acetone</strong><small>Industrial Chemicals</small></span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+<a class="apd-related-card" href="product-pages/industrial-chemicals--toluene.html"><span class="apd-related-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v7l-5.8 9a2 2 0 0 0 1.7 3h12.2a2 2 0 0 0 1.7-3L14 10V3"/><path d="M7 16h10"/></svg></span><span><strong>Toluene</strong><small>Industrial Chemicals</small></span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+<a href="index.html#home" class="arima-footer-logo"> <img src="assets/images/arima-logo.png" alt="Arima Chemical"> </a>
+<a href="index.html#home"> <span>Home</span> <i class="fa-solid fa-arrow-right"></i> </a>
+<a href="index.html#products"> <span>Products</span> <i class="fa-solid fa-arrow-right"></i> </a>
+
+--- LOADED STYLES AND SCRIPTS ---
+<link rel="icon" href="assets/images/arima-logo.png">
+<link rel="stylesheet" href="assets/css/arima-logo-adjust.css?v=1">
+<link rel="stylesheet" href="assets/css/arima-premium-products.css?v=20261014-pages3">
+<link rel="stylesheet" href="assets/css/arima-products-luxury.css?v=20261014-v4">
+<link rel="stylesheet" href="../assets/css/arima-products-v5.css?v=5">
+<link rel="stylesheet" href="../assets/css/arima-premium-v6.css?v=6">
+<script defer src="assets/js/arima-premium-products.js?v=20261014-pages3">
+<script defer src="assets/js/arima-products-luxury.js?v=20261014-v4">
+<script defer src="../assets/js/arima-products-v5.js?v=5">
+<script defer src="../assets/js/arima-premium-v6.js?v=6">
+
+--- V6 CHECK ---
+V6 CSS referenced: True
+V6 JS referenced: True
+Old V5 JS referenced: True

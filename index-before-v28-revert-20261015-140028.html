@@ -1,0 +1,8310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Arima Chemical provides professional chemical solutions for water treatment, industrial applications, swimming pools, cleaning and maintenance.">
+
+    <meta name="keywords"
+        content="Arima Chemical, water treatment chemicals, industrial chemicals, swimming pool chemicals, chemical dosage calculator">
+
+    <meta name="author" content="Arima Chemical">
+
+    <title>Arima Chemical | Precision Chemical Solutions</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        /* =====================================================
+           ROOT
+        ===================================================== */
+
+        :root {
+
+            --navy: #041a2c;
+            --navy-2: #062a46;
+            --navy-3: #083b63;
+
+            --blue: #0878ee;
+            --blue-2: #0560cc;
+            --cyan: #14cee6;
+            --cyan-light: #76e9f4;
+
+            --green: #29b99f;
+
+            --white: #ffffff;
+
+            --bg: #f5f9fc;
+            --bg-soft: #eef6fb;
+
+            --text: #071d35;
+            --muted: #63778b;
+
+            --border: #dce9f2;
+
+            --shadow:
+                0 18px 60px rgba(5, 38, 67, .10);
+
+            --shadow-hover:
+                0 28px 70px rgba(5, 38, 67, .17);
+
+            --radius: 22px;
+            --radius-sm: 15px;
+
+            --max-width: 1240px;
+
+            --header-height: 82px;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: "Manrope", sans-serif;
+            color: var(--text);
+            background: #fff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            width: min(calc(100% - 40px), var(--max-width));
+            margin-inline: auto;
+        }
+
+
+        /* =====================================================
+           COMMON
+        ===================================================== */
+
+        .section {
+            padding: 105px 0;
+            position: relative;
+        }
+
+        .section-soft {
+            background:
+                linear-gradient(180deg,
+                    #f8fbfd 0%,
+                    #eef7fb 100%);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            text-transform: uppercase;
+            letter-spacing: 2.3px;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            color: var(--blue);
+            margin-bottom: 14px;
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 30px;
+            height: 2px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--blue),
+                    var(--cyan));
+        }
+
+        .section-title {
+            font-size: clamp(30px, 4vw, 52px);
+            line-height: 1.08;
+            letter-spacing: -1.8px;
+            font-weight: 800;
+        }
+
+        .section-title span {
+            color: var(--blue);
+        }
+
+        .section-description {
+            max-width: 620px;
+            margin-top: 18px;
+
+            font-size: 15px;
+            line-height: 1.8;
+
+            color: var(--muted);
+        }
+
+        .section-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 30px;
+
+            margin-bottom: 40px;
+        }
+
+        .section-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            color: var(--blue);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            transition: .3s ease;
+        }
+
+        .section-link:hover {
+            gap: 14px;
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
+
+        .btn {
+            min-height: 52px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            border-radius: 13px;
+
+            padding: 0 24px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            border: 1px solid transparent;
+
+            cursor: pointer;
+
+            position: relative;
+            overflow: hidden;
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                background .3s ease,
+                border-color .3s ease;
+        }
+
+        .btn::before {
+            content: "";
+
+            position: absolute;
+            top: -100%;
+            left: -60%;
+
+            width: 40%;
+            height: 300%;
+
+            background:
+                linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, .4),
+                    transparent);
+
+            transform: rotate(25deg);
+
+            transition: .65s ease;
+        }
+
+        .btn:hover::before {
+            left: 130%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background:
+                linear-gradient(135deg,
+                    var(--blue),
+                    #0f95ff);
+
+            color: #fff;
+
+            box-shadow:
+                0 10px 30px rgba(8, 120, 238, .30);
+        }
+
+        .btn-primary:hover {
+            box-shadow:
+                0 16px 38px rgba(8, 120, 238, .4);
+        }
+
+        .btn-outline {
+            color: #fff;
+            border-color: rgba(255, 255, 255, .45);
+            background: rgba(255, 255, 255, .05);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, .12);
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .site-header {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: var(--header-height);
+
+            z-index: 9999;
+
+            background: rgba(255, 255, 255, .96);
+
+            transition:
+                height .35s ease,
+                box-shadow .35s ease,
+                background .35s ease;
+
+            border-bottom:
+                1px solid rgba(0, 70, 120, .06);
+        }
+
+        .site-header.scrolled {
+            height: 70px;
+
+            background:
+                rgba(255, 255, 255, .93);
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 10px 35px rgba(0, 30, 60, .08);
+        }
+
+        .navbar {
+
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .brand-logo {
+            width: 128px;
+
+            display: flex;
+            align-items: center;
+
+            flex-shrink: 0;
+        }
+
+        .brand-logo img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .nav-right {
+
+            display: flex;
+            align-items: center;
+
+            gap: 28px;
+        }
+
+        .nav-links {
+
+            display: flex;
+            align-items: center;
+
+            list-style: none;
+
+            gap: 31px;
+        }
+
+        .nav-link {
+
+            font-size: 12.5px;
+            font-weight: 700;
+
+            color: #17334d;
+
+            padding: 9px 0;
+
+            position: relative;
+
+            transition: color .3s ease;
+        }
+
+        .nav-link::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            bottom: 0;
+
+            width: 0;
+            height: 2px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--blue),
+                    var(--cyan));
+
+            transform: translateX(-50%);
+
+            transition: width .3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--blue);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-calculator {
+
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            min-height: 45px;
+
+            padding: 0 18px;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(135deg,
+                    var(--blue),
+                    #0563dc);
+
+            color: #fff;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            box-shadow:
+                0 8px 24px rgba(8, 120, 238, .25);
+
+            transition: .3s ease;
+        }
+
+        .nav-calculator:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 14px 28px rgba(8, 120, 238, .32);
+        }
+
+        .nav-login {
+
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .nav-login i {
+            color: var(--blue);
+        }
+
+        .hamburger {
+
+            display: none;
+
+            width: 44px;
+            height: 44px;
+
+            border: 0;
+            border-radius: 11px;
+
+            background: var(--bg-soft);
+
+            color: var(--navy);
+
+            cursor: pointer;
+
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 720px;
+
+            margin-top: var(--header-height);
+
+            background:
+                radial-gradient(circle at 18% 20%,
+                    rgba(0, 190, 255, .15),
+                    transparent 30%),
+                radial-gradient(circle at 75% 30%,
+                    rgba(37, 233, 237, .15),
+                    transparent 30%),
+                linear-gradient(120deg,
+                    #04192b 0%,
+                    #062f52 52%,
+                    #045c89 100%);
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .025) 1px,
+                    transparent 1px),
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, .025) 1px,
+                    transparent 1px);
+
+            background-size: 60px 60px;
+
+            mask-image:
+                linear-gradient(90deg,
+                    #000,
+                    transparent 70%);
+        }
+
+        .hero-wave {
+
+            position: absolute;
+
+            left: -10%;
+            bottom: -270px;
+
+            width: 120%;
+            height: 430px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(77, 218, 255, .19);
+
+            transform: rotate(-4deg);
+        }
+
+        .hero-wave.wave-2 {
+
+            bottom: -330px;
+
+            transform: rotate(5deg);
+
+            opacity: .5;
+        }
+
+        .hero-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, .95fr) minmax(480px, 1.05fr);
+
+            gap: 50px;
+
+            align-items: center;
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+        }
+
+        .hero-copy {
+
+            color: #fff;
+
+            padding: 70px 0;
+        }
+
+        .hero-eyebrow {
+
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 18px;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            color: #93e9ff;
+
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .hero-eyebrow::before {
+
+            content: "";
+
+            width: 32px;
+            height: 2px;
+
+            background: var(--cyan);
+        }
+
+        .hero-title {
+
+            max-width: 670px;
+
+            font-size:
+                clamp(44px,
+                    5.2vw,
+                    72px);
+
+            line-height: .99;
+
+            letter-spacing: -3px;
+
+            font-weight: 800;
+
+            margin-bottom: 24px;
+        }
+
+        .hero-title .accent {
+
+            background:
+                linear-gradient(90deg,
+                    #3ae5f4,
+                    #66eff3);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+
+            max-width: 590px;
+
+            color:
+                rgba(255, 255, 255, .77);
+
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 13px;
+
+            margin-top: 31px;
+        }
+
+        .hero-highlights {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 16px;
+
+            margin-top: 42px;
+
+            max-width: 650px;
+        }
+
+        .hero-highlight {
+
+            display: flex;
+            align-items: center;
+
+            gap: 11px;
+
+            min-width: 0;
+        }
+
+        .hero-highlight-icon {
+
+            width: 42px;
+            height: 42px;
+
+            flex-shrink: 0;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(75, 224, 255, .45);
+
+            background:
+                rgba(255, 255, 255, .06);
+
+            color: var(--cyan);
+        }
+
+        .hero-highlight span {
+
+            font-size: 10.5px;
+
+            color:
+                rgba(255, 255, 255, .73);
+
+            line-height: 1.4;
+
+            font-weight: 600;
+        }
+
+
+        /* HERO IMAGE */
+
+        .hero-visual {
+
+            height: 610px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-shell {
+
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+
+            inset: 0;
+
+            overflow: hidden;
+        }
+
+        .hero-main-image {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            opacity: .94;
+
+            mask-image:
+                linear-gradient(90deg,
+                    transparent 0%,
+                    #000 22%,
+                    #000 100%);
+
+            transform: scale(1.08);
+
+            transition: transform .15s linear;
+        }
+
+        .hero-image-shell::after {
+
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(90deg,
+                    #062f52 0%,
+                    transparent 38%,
+                    rgba(0, 20, 40, .12));
+        }
+
+        .water-orb {
+
+            position: absolute;
+
+            width: 330px;
+            height: 330px;
+
+            border-radius: 48% 52% 54% 46% / 48% 45% 55% 52%;
+
+            border:
+                1px solid rgba(134, 244, 255, .6);
+
+            background:
+                linear-gradient(140deg,
+                    rgba(255, 255, 255, .16),
+                    rgba(20, 190, 240, .1));
+
+            backdrop-filter: blur(4px);
+
+            box-shadow:
+                inset 0 0 70px rgba(51, 222, 255, .16),
+                0 0 100px rgba(0, 190, 255, .14);
+
+            animation:
+                liquidMorph 8s ease-in-out infinite;
+
+            z-index: 3;
+
+            pointer-events: none;
+        }
+
+        @keyframes liquidMorph {
+
+            0%,
+            100% {
+                border-radius:
+                    48% 52% 54% 46% / 48% 45% 55% 52%;
+            }
+
+            50% {
+                border-radius:
+                    56% 44% 46% 54% / 42% 58% 42% 58%;
+            }
+        }
+
+
+        /* MOLECULES */
+
+        .molecule {
+
+            position: absolute;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle,
+                    #d8fbff,
+                    #1dd7ed 55%,
+                    #0570a7);
+
+            box-shadow:
+                0 0 25px rgba(35, 228, 245, .4);
+
+            z-index: 5;
+
+            animation:
+                floatParticle var(--speed, 6s) ease-in-out infinite;
+        }
+
+        .molecule::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 10px;
+            top: 5px;
+
+            width: var(--line, 65px);
+            height: 1px;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(91, 234, 247, .8),
+                    transparent);
+
+            transform:
+                rotate(var(--rotate, 20deg));
+
+            transform-origin: left;
+        }
+
+        .mol-1 {
+            top: 18%;
+            left: 17%;
+            --speed: 6.5s;
+            --rotate: 25deg;
+            --line: 80px;
+        }
+
+        .mol-2 {
+            top: 34%;
+            left: 31%;
+            --speed: 7.5s;
+            --rotate: -30deg;
+            --line: 60px;
+        }
+
+        .mol-3 {
+            top: 66%;
+            left: 22%;
+            --speed: 8.2s;
+            --rotate: 8deg;
+            --line: 75px;
+        }
+
+        @keyframes floatParticle {
+
+            0%,
+            100% {
+                transform:
+                    translate3d(0, 0, 0);
+            }
+
+            50% {
+                transform:
+                    translate3d(10px, -18px, 0);
+            }
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                .95fr 1.05fr;
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+        .about-image {
+
+            height: 495px;
+
+            overflow: hidden;
+
+            border-radius: 24px;
+
+            position: relative;
+
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .8s cubic-bezier(.2, .7, .2, 1);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.045);
+        }
+
+        .about-image::after {
+
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(180deg,
+                    transparent 45%,
+                    rgba(1, 26, 46, .25));
+        }
+
+        .about-logo-badge {
+
+            position: absolute;
+
+            left: 24px;
+            bottom: 24px;
+
+            z-index: 2;
+
+            width: 150px;
+
+            padding: 12px 16px;
+
+            background: rgba(255, 255, 255, .94);
+
+            backdrop-filter: blur(10px);
+
+            border-radius: 13px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, .14);
+        }
+
+        .about-description {
+
+            color: var(--muted);
+
+            font-size: 14px;
+            line-height: 1.8;
+
+            margin-top: 20px;
+        }
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 14px;
+
+            margin-top: 35px;
+        }
+
+        .stat {
+
+            border-right:
+                1px solid var(--border);
+
+            padding-right: 12px;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+
+            color: var(--blue);
+
+            font-size: 30px;
+
+            font-weight: 800;
+
+            line-height: 1;
+        }
+
+        .stat-label {
+
+            margin-top: 7px;
+
+            color: var(--muted);
+
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .about-features {
+
+            margin-top: 38px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 13px;
+        }
+
+        .about-feature {
+
+            min-height: 98px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 16px;
+
+            border-radius: 15px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                linear-gradient(145deg,
+                    #fff,
+                    #f7fbfd);
+
+            transition: .35s ease;
+        }
+
+        .about-feature:hover {
+
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(8, 120, 238, .25);
+
+            box-shadow:
+                0 15px 35px rgba(5, 44, 75, .08);
+        }
+
+        .about-feature-icon {
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 13px;
+
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+
+            background:
+                #e9f8ff;
+
+            color: var(--blue);
+
+            font-size: 17px;
+        }
+
+        .about-feature h4 {
+            font-size: 12px;
+        }
+
+        .about-feature p {
+
+            font-size: 9.5px;
+            color: var(--muted);
+
+            margin-top: 3px;
+        }
+
+
+        /* =====================================================
+           PRODUCTS
+        ===================================================== */
+
+        .products-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .product-card {
+
+            background: #fff;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 19px;
+
+            overflow: hidden;
+
+            transition:
+                transform .4s cubic-bezier(.2, .7, .2, 1),
+                box-shadow .4s ease,
+                border-color .4s ease;
+
+            position: relative;
+        }
+
+        .product-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: var(--shadow-hover);
+
+            border-color:
+                rgba(8, 120, 238, .2);
+        }
+
+        .product-image {
+
+            height: 205px;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .product-image::after {
+
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(180deg,
+                    transparent 55%,
+                    rgba(0, 34, 63, .12));
+        }
+
+        .product-image img {
+
+            height: 100%;
+            object-fit: cover;
+
+            transition:
+                transform .65s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-body {
+            padding: 22px;
+        }
+
+        .product-body h3 {
+
+            font-size: 16px;
+            line-height: 1.35;
+
+            margin-bottom: 8px;
+        }
+
+        .product-body p {
+
+            font-size: 11px;
+            line-height: 1.7;
+
+            color: var(--muted);
+
+            min-height: 57px;
+        }
+
+        .product-link {
+
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-top: 18px;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            color: var(--blue);
+
+            border:
+                1px solid #9ad0ff;
+
+            border-radius: 20px;
+
+            padding: 8px 15px;
+
+            transition: .3s ease;
+        }
+
+        .product-link:hover {
+
+            color: #fff;
+
+            background: var(--blue);
+
+            border-color: var(--blue);
+        }
+
+
+        /* =====================================================
+           APPLICATIONS
+        ===================================================== */
+
+        .applications-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 13px;
+        }
+
+        .application-card {
+
+            background: #fff;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            transition:
+                transform .4s ease,
+                box-shadow .4s ease;
+        }
+
+        .application-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 20px 45px rgba(6, 41, 69, .11);
+        }
+
+        .application-image {
+
+            height: 155px;
+
+            overflow: hidden;
+        }
+
+        .application-image img {
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .6s ease;
+        }
+
+        .application-card:hover .application-image img {
+
+            transform: scale(1.07);
+        }
+
+        .application-body {
+
+            padding: 18px;
+
+            position: relative;
+        }
+
+        .application-body h3 {
+
+            font-size: 13px;
+            line-height: 1.4;
+
+            max-width: 80%;
+        }
+
+        .application-body p {
+
+            font-size: 10px;
+
+            color: var(--muted);
+
+            margin-top: 7px;
+
+            line-height: 1.5;
+        }
+
+        .app-arrow {
+
+            position: absolute;
+
+            top: 18px;
+            right: 15px;
+
+            width: 31px;
+            height: 31px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid #b9dcf8;
+
+            display: grid;
+            place-items: center;
+
+            color: var(--blue);
+
+            font-size: 10px;
+
+            transition: .3s ease;
+        }
+
+        .application-card:hover .app-arrow {
+
+            background: var(--blue);
+
+            color: #fff;
+
+            transform:
+                rotate(-35deg);
+        }
+
+
+        /* =====================================================
+           WHY US
+        ===================================================== */
+
+        .why-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                .7fr 1.8fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .why-card {
+
+            min-height: 175px;
+
+            padding: 26px 18px;
+
+            border-radius: 18px;
+
+            border:
+                1px solid var(--border);
+
+            background: #fff;
+
+            text-align: center;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .why-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 20px 42px rgba(5, 46, 76, .09);
+        }
+
+        .why-icon {
+
+            width: 47px;
+            height: 47px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 14px;
+
+            display: grid;
+            place-items: center;
+
+            color: #fff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--blue),
+                    var(--cyan));
+
+            box-shadow:
+                0 9px 24px rgba(8, 120, 238, .22);
+        }
+
+        .why-card:nth-child(2) .why-icon {
+
+            background:
+                linear-gradient(135deg,
+                    #7956ef,
+                    #ad7cff);
+        }
+
+        .why-card:nth-child(3) .why-icon {
+
+            background:
+                linear-gradient(135deg,
+                    #00a98f,
+                    #4bd8bd);
+        }
+
+        .why-card:nth-child(4) .why-icon {
+
+            background:
+                linear-gradient(135deg,
+                    #0f72e8,
+                    #46b6ff);
+        }
+
+        .why-card:nth-child(5) .why-icon {
+
+            background:
+                linear-gradient(135deg,
+                    #177ae1,
+                    #2fd4dd);
+        }
+
+        .why-card:nth-child(6) .why-icon {
+
+            background:
+                linear-gradient(135deg,
+                    #0daa9f,
+                    #4bd0c7);
+        }
+
+        .why-card h3 {
+
+            font-size: 12px;
+
+            margin-bottom: 7px;
+        }
+
+        .why-card p {
+
+            font-size: 9.8px;
+
+            line-height: 1.55;
+
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           CALCULATOR PROMO
+        ===================================================== */
+
+        .calculator-promo {
+
+            padding: 90px 0;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 25% 40%,
+                    rgba(22, 213, 232, .15),
+                    transparent 30%),
+                linear-gradient(120deg,
+                    #031c32,
+                    #075b84);
+
+            color: #fff;
+        }
+
+        .calculator-promo::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+                radial-gradient(rgba(64, 225, 241, .18) 1px,
+                    transparent 1px);
+
+            background-size: 34px 34px;
+
+            mask-image:
+                linear-gradient(90deg,
+                    #000,
+                    transparent 70%);
+        }
+
+        .calc-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                .82fr 1.18fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .calc-copy .eyebrow {
+
+            color: #7febf4;
+        }
+
+        .calc-copy .eyebrow::before {
+            background: #7febf4;
+        }
+
+        .calc-copy .section-title {
+
+            color: #fff;
+
+            max-width: 480px;
+        }
+
+        .calc-copy p {
+
+            color:
+                rgba(255, 255, 255, .7);
+
+            font-size: 14px;
+
+            margin-top: 17px;
+
+            max-width: 480px;
+        }
+
+        .calc-benefits {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 14px;
+
+            margin-top: 28px;
+        }
+
+        .calc-benefit {
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 10px;
+
+            color:
+                rgba(255, 255, 255, .76);
+        }
+
+        .calc-benefit i {
+
+            width: 34px;
+            height: 34px;
+
+            border-radius: 10px;
+
+            display: grid;
+            place-items: center;
+
+            border:
+                1px solid rgba(255, 255, 255, .22);
+
+            color: #65e7f5;
+        }
+
+
+        /* Calculator mockup */
+
+        .calculator-demo {
+
+            background:
+                rgba(255, 255, 255, .97);
+
+            color: var(--text);
+
+            border-radius: 23px;
+
+            padding: 28px;
+
+            box-shadow:
+                0 35px 80px rgba(0, 0, 0, .25);
+
+            position: relative;
+        }
+
+        .demo-steps {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 10px;
+
+            border-bottom:
+                1px solid var(--border);
+
+            padding-bottom: 18px;
+        }
+
+        .demo-step {
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            color: #94a5b5;
+        }
+
+        .demo-step-number {
+
+            width: 26px;
+            height: 26px;
+
+            border-radius: 50%;
+
+            display: grid;
+            place-items: center;
+
+            background: #edf2f6;
+
+            font-size: 10px;
+        }
+
+        .demo-step.active {
+            color: var(--blue);
+        }
+
+        .demo-step.active .demo-step-number {
+
+            background: var(--blue);
+
+            color: #fff;
+        }
+
+        .demo-title {
+
+            margin-top: 20px;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .demo-options {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+            margin-top: 13px;
+        }
+
+        .demo-option {
+
+            min-height: 92px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 13px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            color: #6c8194;
+
+            font-size: 9px;
+            font-weight: 700;
+
+            transition: .3s ease;
+        }
+
+        .demo-option i {
+
+            font-size: 19px;
+
+            color: var(--blue);
+        }
+
+        .demo-option.active {
+
+            color: var(--blue);
+
+            background: #f1f8ff;
+
+            border-color: #78bfff;
+
+            box-shadow:
+                0 5px 20px rgba(8, 120, 238, .08);
+        }
+
+        .demo-option:hover {
+
+            border-color: var(--blue);
+
+            transform: translateY(-3px);
+        }
+
+        .demo-next {
+
+            margin-top: 18px;
+
+            width: 135px;
+
+            height: 40px;
+
+            border: 0;
+            border-radius: 10px;
+
+            background: var(--blue);
+
+            color: #fff;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .contact-info {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-top: 32px;
+        }
+
+        .contact-item {
+
+            display: flex;
+
+            gap: 10px;
+
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+
+            width: 36px;
+            height: 36px;
+
+            border-radius: 10px;
+
+            flex-shrink: 0;
+
+            display: grid;
+            place-items: center;
+
+            background:
+                #eaf6ff;
+
+            color: var(--blue);
+        }
+
+        .contact-item strong {
+
+            display: block;
+
+            font-size: 10px;
+        }
+
+        .contact-item span {
+
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            margin-top: 4px;
+        }
+
+        .contact-form {
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            background: #fff;
+
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h3 {
+
+            font-size: 18px;
+
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-control {
+
+            width: 100%;
+            height: 49px;
+
+            border:
+                1px solid #d9e6ef;
+
+            border-radius: 11px;
+
+            padding: 0 15px;
+
+            color: var(--text);
+
+            font-size: 11px;
+
+            outline: none;
+
+            background: #fbfdff;
+
+            transition:
+                border-color .3s ease,
+                box-shadow .3s ease;
+        }
+
+        textarea.form-control {
+
+            height: 125px;
+
+            resize: vertical;
+
+            padding-top: 14px;
+        }
+
+        .form-control:focus {
+
+            border-color: var(--blue);
+
+            box-shadow:
+                0 0 0 4px rgba(8, 120, 238, .08);
+        }
+
+        .submit-btn {
+
+            width: 165px;
+
+            border: 0;
+
+            float: right;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+
+            background:
+                linear-gradient(120deg,
+                    #031522,
+                    #062b47);
+
+            color: rgba(255, 255, 255, .68);
+
+            padding: 36px 0;
+        }
+
+        .footer-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr auto 1fr;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+        .footer-brand {
+
+            display: flex;
+            align-items: center;
+
+            gap: 14px;
+        }
+
+        .footer-brand img {
+            width: 82px;
+        }
+
+        .footer-brand strong {
+
+            color: #fff;
+
+            font-size: 12px;
+
+            display: block;
+        }
+
+        .footer-brand span {
+
+            font-size: 9px;
+        }
+
+        .footer-links {
+
+            display: flex;
+
+            gap: 20px;
+
+            font-size: 9px;
+        }
+
+        .footer-links a {
+            transition: .3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-right {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            gap: 18px;
+        }
+
+        .socials {
+
+            display: flex;
+
+            gap: 8px;
+        }
+
+        .socials a {
+
+            width: 31px;
+            height: 31px;
+
+            border-radius: 50%;
+
+            display: grid;
+            place-items: center;
+
+            border:
+                1px solid rgba(255, 255, 255, .18);
+
+            color: #fff;
+
+            font-size: 10px;
+
+            transition: .3s ease;
+        }
+
+        .socials a:hover {
+
+            background: var(--blue);
+
+            border-color: var(--blue);
+
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 8.5px;
+        }
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(45px);
+
+            transition:
+                opacity .8s cubic-bezier(.2, .7, .2, 1),
+
+                transform .8s cubic-bezier(.2, .7, .2, 1);
+        }
+
+        .reveal-left {
+
+            opacity: 0;
+
+            transform:
+                translateX(-55px);
+
+            transition:
+                opacity .85s ease,
+                transform .85s ease;
+        }
+
+        .reveal-right {
+
+            opacity: 0;
+
+            transform:
+                translateX(55px);
+
+            transition:
+                opacity .85s ease,
+                transform .85s ease;
+        }
+
+        .reveal-scale {
+
+            opacity: 0;
+
+            transform:
+                scale(.94);
+
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+        .reveal.visible,
+        .reveal-left.visible,
+        .reveal-right.visible,
+        .reveal-scale.visible {
+
+            opacity: 1;
+
+            transform:
+                translate3d(0, 0, 0) scale(1);
+        }
+
+        [data-delay="100"] {
+            transition-delay: .1s;
+        }
+
+        [data-delay="200"] {
+            transition-delay: .2s;
+        }
+
+        [data-delay="300"] {
+            transition-delay: .3s;
+        }
+
+        [data-delay="400"] {
+            transition-delay: .4s;
+        }
+
+        [data-delay="500"] {
+            transition-delay: .5s;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1120px) {
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .nav-calculator {
+                padding: 0 13px;
+            }
+
+            .hero-layout {
+
+                grid-template-columns:
+                    1fr .9fr;
+            }
+
+            .hero-title {
+                font-size: 53px;
+            }
+
+            .products-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .applications-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 900px) {
+
+            :root {
+                --header-height: 72px;
+            }
+
+            .hamburger {
+                display: grid;
+                place-items: center;
+            }
+
+            .nav-right {
+
+                position: fixed;
+
+                top: 72px;
+                left: 0;
+
+                width: 100%;
+
+                padding: 25px 20px 32px;
+
+                background:
+                    rgba(255, 255, 255, .98);
+
+                backdrop-filter: blur(18px);
+
+                box-shadow:
+                    0 18px 40px rgba(0, 30, 50, .12);
+
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+
+                gap: 20px;
+
+                opacity: 0;
+                visibility: hidden;
+
+                transform:
+                    translateY(-15px);
+
+                transition:
+                    .35s ease;
+            }
+
+            .nav-right.open {
+
+                opacity: 1;
+                visibility: visible;
+
+                transform:
+                    translateY(0);
+            }
+
+            .nav-links {
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 4px;
+            }
+
+            .nav-link {
+
+                width: 100%;
+
+                padding: 10px 0;
+            }
+
+            .nav-actions {
+
+                display: grid;
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .nav-login {
+
+                min-height: 45px;
+
+                justify-content: center;
+
+                border:
+                    1px solid var(--border);
+
+                border-radius: 11px;
+            }
+
+            .hero {
+
+                min-height: auto;
+            }
+
+            .hero-layout {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .hero-copy {
+
+                padding:
+                    80px 0 15px;
+            }
+
+            .hero-visual {
+
+                height: 450px;
+
+                margin-inline:
+                    -20px;
+            }
+
+            .hero-main-image {
+
+                mask-image:
+                    linear-gradient(180deg,
+                        transparent 0,
+                        #000 18%,
+                        #000 100%);
+            }
+
+            .about-layout,
+            .why-layout,
+            .calc-layout,
+            .contact-layout {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .about-image {
+                height: 420px;
+            }
+
+            .applications-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .why-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .footer-layout {
+
+                grid-template-columns:
+                    1fr;
+
+                text-align: center;
+            }
+
+            .footer-brand,
+            .footer-links,
+            .footer-right {
+
+                justify-content: center;
+            }
+
+        }
+
+
+        @media (max-width: 620px) {
+
+            .container {
+
+                width:
+                    min(calc(100% - 28px),
+                        var(--max-width));
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .brand-logo {
+                width: 104px;
+            }
+
+            .hero-copy {
+
+                padding-top: 68px;
+            }
+
+            .hero-title {
+
+                font-size:
+                    clamp(37px,
+                        11vw,
+                        52px);
+
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 13px;
+            }
+
+            .hero-buttons {
+
+                display: grid;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-highlights {
+
+                grid-template-columns:
+                    1fr;
+
+                margin-top: 30px;
+            }
+
+            .hero-visual {
+
+                height: 330px;
+            }
+
+            .water-orb {
+
+                width: 230px;
+                height: 230px;
+            }
+
+            .section-head {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                margin-bottom: 28px;
+            }
+
+            .section-title {
+
+                font-size:
+                    clamp(29px,
+                        9vw,
+                        40px);
+
+                letter-spacing: -1.2px;
+            }
+
+            .about-image {
+                height: 330px;
+            }
+
+            .stats {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 25px;
+            }
+
+            .stat {
+
+                border-right: 0;
+
+                border-bottom:
+                    1px solid var(--border);
+
+                padding-bottom: 15px;
+            }
+
+            .about-features {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .products-grid,
+            .applications-grid,
+            .why-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .product-image {
+                height: 220px;
+            }
+
+            .application-image {
+                height: 190px;
+            }
+
+            .calc-benefits {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .calculator-demo {
+
+                padding: 20px 15px;
+            }
+
+            .demo-step {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .demo-options {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .contact-info {
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 20px;
+            }
+
+            .contact-form {
+                padding: 22px 16px;
+            }
+
+            .form-row {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .submit-btn {
+
+                width: 100%;
+                float: none;
+            }
+
+            .footer-links {
+
+                flex-wrap: wrap;
+            }
+
+            .footer-right {
+
+                flex-direction: column;
+            }
+
+        }
+
+
+        /* Reduced motion */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            * {
+
+                scroll-behavior: auto !important;
+
+                animation:
+                    none !important;
+
+                transition:
+                    none !important;
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right,
+            .reveal-scale {
+
+                opacity: 1;
+
+                transform: none;
+            }
+
+        }
+    </style>
+
+
+
+
+    <style id="arima-hero-final-fix">
+        /* =========================================================
+   ARIMA HERO - FINAL COMPACT RESPONSIVE VERSION
+========================================================= */
+
+        .hero {
+            margin-top: var(--header-height) !important;
+
+            height: clamp(560px,
+                    calc(100svh - var(--header-height)),
+                    650px) !important;
+
+            min-height: 0 !important;
+
+            position: relative !important;
+            overflow: hidden !important;
+
+            display: flex !important;
+            align-items: stretch !important;
+        }
+
+
+        /* CONTAINER */
+
+        .hero>.container {
+            width: min(calc(100% - 40px), 1380px) !important;
+        }
+
+
+        /* MAIN GRID */
+
+        .hero-layout {
+            width: 100% !important;
+            height: 100% !important;
+
+            display: grid !important;
+
+            grid-template-columns:
+                minmax(0, .98fr) minmax(0, 1.02fr) !important;
+
+            gap: 0 !important;
+
+            align-items: stretch !important;
+
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+
+        /* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+        .hero-copy {
+            height: 100% !important;
+
+            padding:
+                30px 45px 30px 0 !important;
+
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+
+            position: relative !important;
+            z-index: 5 !important;
+        }
+
+
+        .hero-eyebrow {
+            margin-bottom: 14px !important;
+
+            font-size: 10px !important;
+
+            letter-spacing: 2px !important;
+        }
+
+
+        .hero-title {
+            max-width: 680px !important;
+
+            font-size:
+                clamp(42px,
+                    4.1vw,
+                    64px) !important;
+
+            line-height: .98 !important;
+
+            letter-spacing: -2.5px !important;
+
+            margin-bottom: 18px !important;
+        }
+
+
+        .hero-description {
+            max-width: 620px !important;
+
+            font-size: 13.5px !important;
+
+            line-height: 1.7 !important;
+        }
+
+
+        .hero-buttons {
+            margin-top: 22px !important;
+        }
+
+
+        .hero-buttons .btn {
+            min-height: 48px !important;
+
+            padding:
+                0 21px !important;
+        }
+
+
+        .hero-highlights {
+            margin-top: 24px !important;
+
+            gap: 12px !important;
+        }
+
+
+        .hero-highlight-icon {
+            width: 36px !important;
+            height: 36px !important;
+        }
+
+
+        .hero-highlight span {
+            font-size: 9.5px !important;
+        }
+
+
+        /* =========================================================
+   RIGHT IMAGE
+========================================================= */
+
+        .hero-visual {
+            width: 100% !important;
+            height: 100% !important;
+
+            min-height: 0 !important;
+
+            position: relative !important;
+
+            overflow: hidden !important;
+        }
+
+
+        .hero-image-shell {
+            position: absolute !important;
+
+            inset: 0 !important;
+
+            width: 100% !important;
+            height: 100% !important;
+
+            overflow: hidden !important;
+        }
+
+
+        .hero-main-image {
+            position: absolute !important;
+
+            inset: 0 !important;
+
+            display: block !important;
+
+            width: 100% !important;
+            height: 100% !important;
+
+            max-width: none !important;
+
+            object-fit: cover !important;
+
+            /*
+       Shows more of the useful center/right part
+       instead of cropping aggressively.
+    */
+            object-position: 55% center !important;
+
+            transform: none !important;
+
+            opacity: 1 !important;
+
+            mask-image: none !important;
+            -webkit-mask-image: none !important;
+        }
+
+
+        /* CLEAN LEFT-TO-RIGHT IMAGE BLEND */
+
+        .hero-image-shell::before {
+            content: "" !important;
+
+            position: absolute !important;
+
+            inset: 0 !important;
+
+            z-index: 2 !important;
+
+            pointer-events: none !important;
+
+            background:
+                linear-gradient(90deg,
+                    #062f52 0%,
+                    rgba(6, 47, 82, .82) 5%,
+                    rgba(6, 47, 82, .45) 17%,
+                    rgba(6, 47, 82, .14) 32%,
+                    transparent 50%) !important;
+        }
+
+
+        /* subtle dark treatment */
+
+        .hero-image-shell::after {
+            content: "" !important;
+
+            position: absolute !important;
+
+            inset: 0 !important;
+
+            z-index: 2 !important;
+
+            pointer-events: none !important;
+
+            background:
+                linear-gradient(180deg,
+                    rgba(2, 21, 38, .04),
+                    rgba(1, 29, 51, .08)) !important;
+        }
+
+
+        /* REMOVE THE LARGE BLURRED CIRCLE */
+
+        .water-orb {
+            display: none !important;
+        }
+
+
+        /* keep molecule decorations */
+
+        .molecule {
+            z-index: 4 !important;
+
+            transform: scale(.82) !important;
+        }
+
+
+        /* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+        @media(max-width:1250px) {
+
+            .hero-title {
+                font-size:
+                    clamp(40px,
+                        4vw,
+                        57px) !important;
+            }
+
+            .hero-copy {
+                padding-right: 30px !important;
+            }
+
+        }
+
+
+        /* =========================================================
+   TABLET
+========================================================= */
+
+        @media(max-width:950px) {
+
+            .hero {
+                height: auto !important;
+                min-height: auto !important;
+            }
+
+            .hero-layout {
+                grid-template-columns: 1fr !important;
+            }
+
+            .hero-copy {
+                min-height: 520px !important;
+
+                padding:
+                    55px 0 40px !important;
+            }
+
+            .hero-visual {
+                height: 430px !important;
+            }
+
+            .hero-image-shell::before {
+                background:
+                    linear-gradient(180deg,
+                        #062f52 0%,
+                        rgba(6, 47, 82, .48) 12%,
+                        rgba(6, 47, 82, .08) 35%,
+                        transparent 55%) !important;
+            }
+
+        }
+
+
+        /* =========================================================
+   MOBILE
+========================================================= */
+
+        @media(max-width:600px) {
+
+            .hero {
+                height: auto !important;
+
+                min-height: auto !important;
+            }
+
+            .hero>.container {
+                width: 100% !important;
+            }
+
+            .hero-copy {
+                min-height: auto !important;
+
+                padding:
+                    52px 20px 38px !important;
+            }
+
+            .hero-title {
+                font-size:
+                    clamp(37px,
+                        11vw,
+                        49px) !important;
+
+                letter-spacing: -1.8px !important;
+            }
+
+            .hero-description {
+                font-size: 13px !important;
+            }
+
+            .hero-buttons {
+                display: grid !important;
+
+                grid-template-columns: 1fr !important;
+            }
+
+            .hero-buttons .btn {
+                width: 100% !important;
+            }
+
+            .hero-highlights {
+                grid-template-columns: 1fr !important;
+            }
+
+            .hero-visual {
+                height: 310px !important;
+            }
+
+            .hero-main-image {
+                object-position: center center !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-footer-card-upgrade">
+        /* =========================================================
+   ALL PREMIUM CARD HOVERS
+========================================================= */
+
+        .product-card,
+        .application-card,
+        .why-card,
+        .about-feature,
+        .calculator-demo {
+
+            position: relative;
+            isolation: isolate;
+
+            overflow: hidden;
+
+            transition:
+                transform .45s cubic-bezier(.2, .75, .25, 1),
+                box-shadow .45s ease,
+                border-color .4s ease,
+                background .4s ease !important;
+        }
+
+
+        /* gradient light glow */
+
+        .product-card::before,
+        .application-card::before,
+        .why-card::before,
+        .about-feature::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 170px;
+            height: 170px;
+
+            top: -95px;
+            right: -95px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle,
+                    rgba(22, 202, 236, .22) 0%,
+                    rgba(8, 120, 238, .08) 42%,
+                    transparent 72%);
+
+            opacity: 0;
+
+            transform: scale(.6);
+
+            transition:
+                opacity .45s ease,
+                transform .55s ease;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* shine */
+
+        .product-card::after,
+        .application-card::after,
+        .why-card::after,
+        .about-feature::after {
+
+            content: "";
+
+            position: absolute;
+
+            top: -140%;
+            left: -55%;
+
+            width: 38%;
+            height: 330%;
+
+            background:
+                linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, .48),
+                    transparent);
+
+            transform: rotate(22deg);
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition:
+                left .75s ease,
+                opacity .3s ease;
+        }
+
+
+        /* CARD HOVER */
+
+        .product-card:hover,
+        .application-card:hover,
+        .why-card:hover,
+        .about-feature:hover {
+
+            transform:
+                translateY(-10px) scale(1.015) !important;
+
+            border-color:
+                rgba(8, 120, 238, .42) !important;
+
+            box-shadow:
+                0 24px 55px rgba(4, 50, 86, .15),
+                0 0 0 1px rgba(26, 196, 232, .08) !important;
+        }
+
+
+        .product-card:hover::before,
+        .application-card:hover::before,
+        .why-card:hover::before,
+        .about-feature:hover::before {
+
+            opacity: 1;
+
+            transform: scale(1.25);
+        }
+
+
+        .product-card:hover::after,
+        .application-card:hover::after,
+        .why-card:hover::after,
+        .about-feature:hover::after {
+
+            left: 135%;
+
+            opacity: 1;
+        }
+
+
+        /* PRODUCT IMAGE */
+
+        .product-card .product-image img {
+
+            transition:
+                transform .7s cubic-bezier(.2, .7, .2, 1),
+                filter .5s ease !important;
+        }
+
+
+        .product-card:hover .product-image img {
+
+            transform: scale(1.09) !important;
+
+            filter:
+                saturate(1.08) contrast(1.04);
+        }
+
+
+        /* PRODUCT TITLE */
+
+        .product-card h3 {
+
+            transition:
+                color .35s ease;
+        }
+
+
+        .product-card:hover h3 {
+
+            color: #0878ee;
+        }
+
+
+        /* PRODUCT BUTTON */
+
+        .product-card .product-link {
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition:
+                color .35s ease,
+                background .35s ease,
+                padding .35s ease,
+                gap .35s ease !important;
+        }
+
+
+        .product-card:hover .product-link {
+
+            background: #0878ee;
+
+            border-color: #0878ee;
+
+            color: #fff;
+
+            gap: 12px;
+        }
+
+
+        /* =========================================================
+   APPLICATION CARD
+========================================================= */
+
+        .application-card .application-image img {
+
+            transition:
+                transform .7s cubic-bezier(.2, .7, .2, 1),
+                filter .5s ease !important;
+        }
+
+
+        .application-card:hover .application-image img {
+
+            transform: scale(1.1) !important;
+
+            filter:
+                saturate(1.12) contrast(1.03);
+        }
+
+
+        .application-card h3 {
+
+            transition:
+                color .3s ease,
+                transform .3s ease;
+        }
+
+
+        .application-card:hover h3 {
+
+            color: #0878ee;
+
+            transform: translateX(3px);
+        }
+
+
+        .application-card .app-arrow {
+
+            transition:
+                transform .4s cubic-bezier(.2, .8, .2, 1),
+                background .35s ease,
+                color .35s ease,
+                box-shadow .35s ease !important;
+        }
+
+
+        .application-card:hover .app-arrow {
+
+            background:
+                linear-gradient(135deg,
+                    #0878ee,
+                    #12c6df) !important;
+
+            color: #fff !important;
+
+            border-color: transparent !important;
+
+            transform:
+                rotate(-35deg) scale(1.1) !important;
+
+            box-shadow:
+                0 8px 20px rgba(8, 120, 238, .24);
+        }
+
+
+        /* =========================================================
+   WHY CARDS
+========================================================= */
+
+        .why-card .why-icon {
+
+            transition:
+                transform .5s cubic-bezier(.2, .75, .25, 1),
+                box-shadow .4s ease !important;
+        }
+
+
+        .why-card:hover .why-icon {
+
+            transform:
+                translateY(-4px) rotate(-6deg) scale(1.12);
+
+            box-shadow:
+                0 13px 28px rgba(8, 120, 238, .28) !important;
+        }
+
+
+        .why-card h3 {
+
+            transition:
+                color .35s ease;
+        }
+
+
+        .why-card:hover h3 {
+
+            color: #0878ee;
+        }
+
+
+        /* =========================================================
+   ABOUT FEATURE
+========================================================= */
+
+        .about-feature:hover .about-feature-icon {
+
+            color: #fff;
+
+            background:
+                linear-gradient(135deg,
+                    #0878ee,
+                    #16c9df);
+
+            transform:
+                rotate(-5deg) scale(1.08);
+        }
+
+
+        .about-feature-icon {
+
+            transition:
+                transform .4s ease,
+                background .4s ease,
+                color .4s ease !important;
+        }
+
+
+        /* =========================================================
+   CALCULATOR CARD
+========================================================= */
+
+        .calculator-demo {
+
+            transition:
+                transform .45s ease,
+                box-shadow .45s ease !important;
+        }
+
+
+        .calculator-demo:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 38px 95px rgba(0, 0, 0, .32),
+                0 0 0 1px rgba(91, 226, 244, .18) !important;
+        }
+
+
+        .demo-option {
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                background .3s ease,
+                box-shadow .3s ease !important;
+        }
+
+
+        .demo-option:hover {
+
+            transform:
+                translateY(-5px) scale(1.025) !important;
+
+            border-color: #0878ee !important;
+
+            background: #eef8ff !important;
+
+            box-shadow:
+                0 10px 25px rgba(8, 120, 238, .12);
+        }
+
+
+        .demo-option i {
+
+            transition:
+                transform .35s ease;
+        }
+
+
+        .demo-option:hover i {
+
+            transform:
+                translateY(-2px) scale(1.15);
+        }
+
+
+        /* =========================================================
+   PROFESSIONAL FOOTER
+========================================================= */
+
+        .arima-pro-footer {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 10% 20%,
+                    rgba(0, 170, 230, .13),
+                    transparent 27%),
+                radial-gradient(circle at 90% 10%,
+                    rgba(24, 206, 225, .09),
+                    transparent 22%),
+                linear-gradient(125deg,
+                    #021421 0%,
+                    #04243a 52%,
+                    #053453 100%);
+
+            color: #fff;
+
+            padding-top: 78px;
+        }
+
+
+        .arima-pro-footer::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .018) 1px,
+                    transparent 1px),
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, .018) 1px,
+                    transparent 1px);
+
+            background-size: 48px 48px;
+
+            pointer-events: none;
+        }
+
+
+        .arima-footer-glow {
+
+            position: absolute;
+
+            width: 400px;
+            height: 400px;
+
+            border-radius: 50%;
+
+            filter: blur(80px);
+
+            pointer-events: none;
+        }
+
+
+        .glow-one {
+
+            left: -180px;
+            bottom: -220px;
+
+            background:
+                rgba(0, 179, 223, .12);
+        }
+
+
+        .glow-two {
+
+            right: -200px;
+            top: -220px;
+
+            background:
+                rgba(0, 105, 255, .14);
+        }
+
+
+        /* main grid */
+
+        .arima-footer-main {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: grid;
+
+            grid-template-columns:
+                1.35fr .75fr 1fr 1.35fr;
+
+            gap: 55px;
+
+            padding-bottom: 55px;
+        }
+
+
+        /* brand */
+
+        .arima-footer-logo {
+
+            display: block;
+
+            width: 118px;
+
+            margin-bottom: 22px;
+
+            padding: 8px 11px;
+
+            border-radius: 13px;
+
+            background:
+                rgba(255, 255, 255, .96);
+        }
+
+
+        .arima-footer-logo img {
+
+            width: 100%;
+
+            object-fit: contain;
+        }
+
+
+        .arima-footer-brand p {
+
+            max-width: 330px;
+
+            color:
+                rgba(255, 255, 255, .6);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        .arima-footer-socials {
+
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 24px;
+        }
+
+
+        .arima-footer-socials a {
+
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 11px;
+
+            border:
+                1px solid rgba(255, 255, 255, .13);
+
+            background:
+                rgba(255, 255, 255, .045);
+
+            color: #d8f8ff;
+
+            transition:
+                transform .35s ease,
+                background .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .arima-footer-socials a:hover {
+
+            transform:
+                translateY(-5px);
+
+            background:
+                linear-gradient(135deg,
+                    #0878ee,
+                    #12c7df);
+
+            border-color: transparent;
+
+            box-shadow:
+                0 10px 28px rgba(8, 120, 238, .25);
+        }
+
+
+        /* links */
+
+        .arima-footer-column h4 {
+
+            font-size: 13px;
+
+            margin-bottom: 22px;
+
+            color: #fff;
+
+            position: relative;
+        }
+
+
+        .arima-footer-column h4::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -9px;
+
+            width: 27px;
+            height: 2px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(90deg,
+                    #0878ee,
+                    #21d6e7);
+        }
+
+
+        .arima-footer-column a {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 10px;
+
+            padding: 7px 0;
+
+            color:
+                rgba(255, 255, 255, .58);
+
+            font-size: 10.5px;
+
+            transition:
+                color .3s ease,
+                transform .3s ease;
+        }
+
+
+        .arima-footer-column a i {
+
+            font-size: 8px;
+
+            opacity: 0;
+
+            transform:
+                translateX(-7px);
+
+            transition:
+                opacity .3s ease,
+                transform .3s ease;
+        }
+
+
+        .arima-footer-column a:hover {
+
+            color: #73e9f4;
+
+            transform:
+                translateX(4px);
+        }
+
+
+        .arima-footer-column a:hover i {
+
+            opacity: 1;
+
+            transform:
+                translateX(0);
+        }
+
+
+        /* calculator CTA */
+
+        .arima-footer-cta {
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            border:
+                1px solid rgba(255, 255, 255, .12);
+
+            background:
+                linear-gradient(145deg,
+                    rgba(255, 255, 255, .075),
+                    rgba(255, 255, 255, .025));
+
+            backdrop-filter: blur(12px);
+
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, .08);
+        }
+
+
+        .arima-footer-small {
+
+            display: block;
+
+            color: #55ddea;
+
+            font-size: 8px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.6px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .arima-footer-cta h3 {
+
+            font-size: 20px;
+
+            line-height: 1.25;
+
+            letter-spacing: -.5px;
+        }
+
+
+        .arima-footer-cta p {
+
+            margin-top: 10px;
+
+            color:
+                rgba(255, 255, 255, .55);
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+        .arima-footer-calculator {
+
+            min-height: 47px;
+
+            margin-top: 20px;
+
+            padding: 0 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(135deg,
+                    #0878ee,
+                    #0d9ce5);
+
+            color: #fff;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 10px 30px rgba(8, 120, 238, .2);
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .arima-footer-calculator span {
+
+            flex: 1;
+        }
+
+
+        .arima-footer-calculator:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 16px 38px rgba(8, 120, 238, .32);
+        }
+
+
+        /* contact strip */
+
+        .arima-footer-contact-strip {
+
+            position: relative;
+            z-index: 2;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 1px;
+
+            padding:
+                22px 0;
+
+            border-top:
+                1px solid rgba(255, 255, 255, .08);
+        }
+
+
+        .arima-footer-contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding:
+                4px 24px;
+
+            border-right:
+                1px solid rgba(255, 255, 255, .08);
+        }
+
+
+        .arima-footer-contact-item:first-child {
+
+            padding-left: 0;
+        }
+
+
+        .arima-footer-contact-item:last-child {
+
+            border-right: 0;
+        }
+
+
+        .contact-round-icon {
+
+            width: 38px;
+            height: 38px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            color: #55e5ef;
+
+            border:
+                1px solid rgba(85, 229, 239, .22);
+
+            background:
+                rgba(85, 229, 239, .06);
+        }
+
+
+        .arima-footer-contact-item small {
+
+            display: block;
+
+            color:
+                rgba(255, 255, 255, .43);
+
+            font-size: 8px;
+        }
+
+
+        .arima-footer-contact-item strong {
+
+            display: block;
+
+            margin-top: 2px;
+
+            color:
+                rgba(255, 255, 255, .87);
+
+            font-size: 10px;
+        }
+
+
+        /* bottom */
+
+        .arima-footer-bottom {
+
+            position: relative;
+            z-index: 2;
+
+            border-top:
+                1px solid rgba(255, 255, 255, .07);
+
+            background:
+                rgba(0, 0, 0, .13);
+        }
+
+
+        .arima-footer-bottom-inner {
+
+            min-height: 62px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color:
+                rgba(255, 255, 255, .4);
+
+            font-size: 9px;
+        }
+
+
+        .arima-footer-bottom-inner>div {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+        }
+
+
+        .arima-footer-bottom-inner>div span {
+
+            width: 3px;
+            height: 3px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, .28);
+        }
+
+
+        .arima-footer-bottom a {
+
+            transition:
+                color .3s ease;
+        }
+
+
+        .arima-footer-bottom a:hover {
+
+            color: #65e8f2;
+        }
+
+
+        /* =========================================================
+   TABLET FOOTER
+========================================================= */
+
+        @media(max-width:1000px) {
+
+            .arima-footer-main {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 42px;
+            }
+
+        }
+
+
+        /* =========================================================
+   MOBILE
+========================================================= */
+
+        @media(max-width:650px) {
+
+            .arima-pro-footer {
+
+                padding-top: 58px;
+            }
+
+            .arima-footer-main {
+
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+                padding-bottom: 40px;
+            }
+
+            .arima-footer-brand p {
+
+                max-width: 100%;
+            }
+
+            .arima-footer-contact-strip {
+
+                grid-template-columns: 1fr;
+
+                gap: 17px;
+            }
+
+            .arima-footer-contact-item,
+            .arima-footer-contact-item:first-child {
+
+                padding:
+                    0 0 17px;
+
+                border-right: 0;
+
+                border-bottom:
+                    1px solid rgba(255, 255, 255, .07);
+            }
+
+            .arima-footer-contact-item:last-child {
+
+                border-bottom: 0;
+
+                padding-bottom: 0;
+            }
+
+            .arima-footer-bottom-inner {
+
+                min-height: auto;
+
+                padding:
+                    20px 0;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+
+        /* Touch devices: avoid sticky hover */
+
+        @media(hover:none) {
+
+            .product-card:hover,
+            .application-card:hover,
+            .why-card:hover,
+            .about-feature:hover {
+
+                transform: none !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-demo-select-fix">
+        /* Calculator application cards are now interactive */
+
+        .calculator-demo .demo-option {
+            cursor: pointer !important;
+            user-select: none;
+
+            position: relative;
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                background .3s ease,
+                box-shadow .3s ease,
+                color .3s ease !important;
+        }
+
+        .calculator-demo .demo-option:hover {
+            transform: translateY(-5px) !important;
+
+            border-color: #1683f5 !important;
+
+            background: #f4faff !important;
+
+            box-shadow:
+                0 12px 28px rgba(8, 120, 238, .12) !important;
+        }
+
+        .calculator-demo .demo-option.active {
+            border-color: #1683f5 !important;
+
+            background:
+                linear-gradient(145deg,
+                    #f3f9ff,
+                    #e8f5ff) !important;
+
+            color: #0878ee !important;
+
+            box-shadow:
+                0 10px 28px rgba(8, 120, 238, .14),
+                inset 0 0 0 1px rgba(8, 120, 238, .06) !important;
+        }
+
+        .calculator-demo .demo-option.active::after {
+            content: "Ã¢Å“â€œ";
+
+            position: absolute;
+
+            top: 9px;
+            right: 9px;
+
+            width: 20px;
+            height: 20px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: #0878ee;
+
+            color: #fff;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            box-shadow:
+                0 5px 12px rgba(8, 120, 238, .25);
+        }
+
+        .calculator-demo .demo-option i {
+            transition:
+                transform .3s ease,
+                color .3s ease !important;
+        }
+
+        .calculator-demo .demo-option:hover i {
+            transform:
+                translateY(-2px) scale(1.12);
+        }
+
+        .calculator-demo .demo-option.active i {
+            color: #0878ee !important;
+
+            transform: scale(1.12);
+        }
+
+        .calculator-demo .demo-next {
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease !important;
+        }
+
+        .calculator-demo .demo-next:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 28px rgba(8, 120, 238, .25);
+        }
+    </style>
+
+
+    <style id="arima-contact-card-highlight-upgrade">
+        /* =========================================================
+   CONTACT TEXT SIZE UPGRADE
+========================================================= */
+
+        .contact-item strong {
+            font-size: 12.5px !important;
+            font-weight: 800 !important;
+            line-height: 1.35 !important;
+        }
+
+        .contact-item span {
+            font-size: 11.5px !important;
+            line-height: 1.5 !important;
+            margin-top: 4px !important;
+        }
+
+        .contact-icon {
+            width: 40px !important;
+            height: 40px !important;
+            font-size: 14px !important;
+        }
+
+
+        /* =========================================================
+   STRONGER PREMIUM CARD HIGHLIGHT
+========================================================= */
+
+        .product-card,
+        .application-card,
+        .why-card,
+        .about-feature {
+            position: relative !important;
+            isolation: isolate !important;
+
+            overflow: hidden !important;
+
+            border:
+                1px solid rgba(8, 120, 238, .10) !important;
+
+            background:
+                linear-gradient(145deg,
+                    #ffffff 0%,
+                    #fbfdff 100%) !important;
+
+            transition:
+                transform .42s cubic-bezier(.2, .8, .2, 1),
+                box-shadow .42s ease,
+                border-color .42s ease,
+                background .42s ease !important;
+        }
+
+
+        /* animated gradient border glow */
+
+        .product-card::before,
+        .application-card::before,
+        .why-card::before,
+        .about-feature::before {
+
+            content: "" !important;
+
+            position: absolute !important;
+            inset: -1px !important;
+
+            border-radius: inherit !important;
+
+            padding: 1px !important;
+
+            background:
+                linear-gradient(120deg,
+                    rgba(8, 120, 238, 0),
+                    rgba(8, 120, 238, .15),
+                    rgba(18, 211, 225, .65),
+                    rgba(8, 120, 238, .70),
+                    rgba(8, 120, 238, 0)) !important;
+
+            background-size: 250% 250% !important;
+
+            opacity: 0 !important;
+
+            z-index: -2 !important;
+
+            transition:
+                opacity .4s ease !important;
+
+            animation:
+                arimaCardBorderFlow 3.2s linear infinite !important;
+
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0) !important;
+
+            -webkit-mask-composite: xor !important;
+
+            mask-composite: exclude !important;
+
+            pointer-events: none !important;
+        }
+
+        @keyframes arimaCardBorderFlow {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+
+        }
+
+
+        /* soft internal glow */
+
+        .product-card::after,
+        .application-card::after,
+        .why-card::after,
+        .about-feature::after {
+
+            content: "" !important;
+
+            position: absolute !important;
+
+            width: 220px !important;
+            height: 220px !important;
+
+            top: -120px !important;
+            right: -110px !important;
+
+            border-radius: 50% !important;
+
+            background:
+                radial-gradient(circle,
+                    rgba(54, 217, 238, .28) 0%,
+                    rgba(8, 120, 238, .12) 40%,
+                    transparent 72%) !important;
+
+            opacity: 0 !important;
+
+            transform: scale(.55) !important;
+
+            transition:
+                opacity .45s ease,
+                transform .55s ease !important;
+
+            z-index: -1 !important;
+
+            pointer-events: none !important;
+        }
+
+
+        /* MAIN HOVER */
+
+        .product-card:hover,
+        .application-card:hover,
+        .why-card:hover,
+        .about-feature:hover {
+
+            transform:
+                translateY(-12px) scale(1.018) !important;
+
+            border-color:
+                rgba(8, 120, 238, .45) !important;
+
+            background:
+                linear-gradient(145deg,
+                    #ffffff 0%,
+                    #f4fbff 100%) !important;
+
+            box-shadow:
+                0 28px 65px rgba(4, 52, 90, .18),
+
+                0 0 0 1px rgba(20, 194, 225, .12),
+
+                0 0 30px rgba(8, 120, 238, .10) !important;
+        }
+
+
+        .product-card:hover::before,
+        .application-card:hover::before,
+        .why-card:hover::before,
+        .about-feature:hover::before {
+
+            opacity: 1 !important;
+        }
+
+
+        .product-card:hover::after,
+        .application-card:hover::after,
+        .why-card:hover::after,
+        .about-feature:hover::after {
+
+            opacity: 1 !important;
+
+            transform:
+                scale(1.35) !important;
+        }
+
+
+        /* =========================================================
+   PRODUCT CARD STRONG HOVER
+========================================================= */
+
+        .product-card .product-image {
+            position: relative !important;
+        }
+
+        .product-card .product-image img {
+
+            transition:
+                transform .75s cubic-bezier(.2, .8, .2, 1),
+                filter .5s ease !important;
+        }
+
+        .product-card:hover .product-image img {
+
+            transform:
+                scale(1.11) !important;
+
+            filter:
+                saturate(1.15) contrast(1.05) brightness(1.03) !important;
+        }
+
+        .product-card h3 {
+
+            transition:
+                color .35s ease,
+                transform .35s ease !important;
+        }
+
+        .product-card:hover h3 {
+
+            color: #0878ee !important;
+
+            transform:
+                translateX(4px) !important;
+        }
+
+        .product-card .product-link {
+
+            transition:
+                background .35s ease,
+                color .35s ease,
+                border-color .35s ease,
+                gap .35s ease,
+                box-shadow .35s ease !important;
+        }
+
+        .product-card:hover .product-link {
+
+            background:
+                linear-gradient(135deg,
+                    #0878ee,
+                    #0ca8e5) !important;
+
+            color: #fff !important;
+
+            border-color: transparent !important;
+
+            gap: 12px !important;
+
+            box-shadow:
+                0 9px 24px rgba(8, 120, 238, .22) !important;
+        }
+
+
+        /* =========================================================
+   APPLICATION CARD STRONG HOVER
+========================================================= */
+
+        .application-card .application-image img {
+
+            transition:
+                transform .72s ease,
+                filter .5s ease !important;
+        }
+
+        .application-card:hover .application-image img {
+
+            transform:
+                scale(1.11) !important;
+
+            filter:
+                saturate(1.18) contrast(1.05) brightness(1.03) !important;
+        }
+
+        .application-card h3 {
+
+            transition:
+                color .35s ease,
+                transform .35s ease !important;
+        }
+
+        .application-card:hover h3 {
+
+            color: #0878ee !important;
+
+            transform:
+                translateX(4px) !important;
+        }
+
+        .application-card .app-arrow {
+
+            transition:
+                transform .4s cubic-bezier(.2, .8, .2, 1),
+                background .35s ease,
+                color .35s ease,
+                box-shadow .35s ease !important;
+        }
+
+        .application-card:hover .app-arrow {
+
+            background:
+                linear-gradient(135deg,
+                    #0878ee,
+                    #18cbe0) !important;
+
+            color: #fff !important;
+
+            border-color: transparent !important;
+
+            transform:
+                rotate(-35deg) scale(1.14) !important;
+
+            box-shadow:
+                0 10px 25px rgba(8, 120, 238, .28) !important;
+        }
+
+
+        /* =========================================================
+   WHY CARD STRONG HOVER
+========================================================= */
+
+        .why-card .why-icon {
+
+            transition:
+                transform .5s cubic-bezier(.2, .8, .2, 1),
+                box-shadow .4s ease,
+                filter .4s ease !important;
+        }
+
+        .why-card:hover .why-icon {
+
+            transform:
+                translateY(-5px) rotate(-8deg) scale(1.15) !important;
+
+            filter:
+                brightness(1.08) !important;
+
+            box-shadow:
+                0 15px 34px rgba(8, 120, 238, .30) !important;
+        }
+
+        .why-card h3 {
+
+            transition:
+                color .35s ease,
+                transform .35s ease !important;
+        }
+
+        .why-card:hover h3 {
+
+            color: #0878ee !important;
+
+            transform:
+                translateY(-2px) !important;
+        }
+
+
+        /* =========================================================
+   ABOUT FEATURE HOVER
+========================================================= */
+
+        .about-feature .about-feature-icon {
+
+            transition:
+                transform .45s ease,
+                color .35s ease,
+                background .35s ease,
+                box-shadow .35s ease !important;
+        }
+
+        .about-feature:hover .about-feature-icon {
+
+            color: #fff !important;
+
+            background:
+                linear-gradient(135deg,
+                    #0878ee,
+                    #19c8df) !important;
+
+            transform:
+                rotate(-7deg) scale(1.12) !important;
+
+            box-shadow:
+                0 12px 28px rgba(8, 120, 238, .25) !important;
+        }
+
+        .about-feature h4 {
+
+            transition:
+                color .35s ease !important;
+        }
+
+        .about-feature:hover h4 {
+
+            color: #0878ee !important;
+        }
+
+
+        /* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+        @media(hover:none) {
+
+            .product-card:hover,
+            .application-card:hover,
+            .why-card:hover,
+            .about-feature:hover {
+
+                transform: none !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-why-card-line-fix">
+        /* =========================================================
+   WHY CHOOSE ARIMA - CLEAN HOVER FIX
+   removes the visible animated line/border artifact
+========================================================= */
+
+        .why-card::before {
+            display: none !important;
+        }
+
+        .why-card::after {
+            content: "" !important;
+
+            position: absolute !important;
+
+            width: 220px !important;
+            height: 220px !important;
+
+            top: -120px !important;
+            right: -110px !important;
+
+            border-radius: 50% !important;
+
+            background:
+                radial-gradient(circle,
+                    rgba(41, 218, 236, .26) 0%,
+                    rgba(8, 120, 238, .10) 42%,
+                    transparent 72%) !important;
+
+            opacity: 0 !important;
+
+            transform: scale(.55) !important;
+
+            transition:
+                opacity .45s ease,
+                transform .55s ease !important;
+
+            pointer-events: none !important;
+
+            z-index: -1 !important;
+        }
+
+        .why-card:hover::after {
+            opacity: 1 !important;
+
+            transform:
+                scale(1.4) !important;
+        }
+
+        .why-card:hover {
+            transform:
+                translateY(-10px) scale(1.015) !important;
+
+            border-color:
+                rgba(8, 120, 238, .38) !important;
+
+            background:
+                linear-gradient(145deg,
+                    #ffffff 0%,
+                    #f3faff 100%) !important;
+
+            box-shadow:
+                0 24px 55px rgba(4, 52, 90, .16),
+
+                0 0 26px rgba(18, 190, 225, .10) !important;
+        }
+
+        .why-card:hover .why-icon {
+            transform:
+                translateY(-5px) scale(1.12) !important;
+
+            box-shadow:
+                0 14px 30px rgba(8, 120, 238, .28) !important;
+        }
+
+        .why-card:hover h3 {
+            color: #0878ee !important;
+        }
+    </style>
+
+
+    <style id="arima-mobile-banner-about-fix">
+        /* =========================================================
+   REMOVE LOGO OVERLAY FROM ABOUT IMAGE
+========================================================= */
+
+        .about-logo-badge {
+            display: none !important;
+        }
+
+
+        /* =========================================================
+   MOBILE HERO + ABOUT ORDER FIX
+========================================================= */
+
+        @media(max-width:800px) {
+
+            /* -----------------------------------------------------
+       HERO
+       Keep text inside normal content width
+       but make image full device width
+    ----------------------------------------------------- */
+
+            .hero {
+                overflow: hidden !important;
+            }
+
+            .hero-layout {
+                width: 100% !important;
+
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .hero-copy {
+                order: 1 !important;
+
+                width: 100% !important;
+
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+
+            /* FULL BLEED IMAGE */
+
+            .hero-visual {
+                order: 2 !important;
+
+                position: relative !important;
+
+                width: 100vw !important;
+                max-width: none !important;
+
+                height: 390px !important;
+                min-height: 390px !important;
+
+                left: 50% !important;
+
+                margin-left: -50vw !important;
+                margin-right: -50vw !important;
+
+                border-radius: 0 !important;
+
+                overflow: hidden !important;
+            }
+
+            .hero-image-shell {
+                position: absolute !important;
+
+                inset: 0 !important;
+
+                width: 100% !important;
+                height: 100% !important;
+
+                border-radius: 0 !important;
+
+                overflow: hidden !important;
+            }
+
+            .hero-main-image {
+                position: absolute !important;
+
+                inset: 0 !important;
+
+                width: 100% !important;
+                height: 100% !important;
+
+                max-width: none !important;
+
+                object-fit: cover !important;
+                object-position: center center !important;
+
+                border-radius: 0 !important;
+
+                transform: none !important;
+            }
+
+
+            /* remove any leftover side rounding */
+
+            .hero-image-shell::before,
+            .hero-image-shell::after {
+                border-radius: 0 !important;
+            }
+
+
+            /* -----------------------------------------------------
+       ABOUT SECTION
+       CONTENT FIRST -> IMAGE SECOND
+    ----------------------------------------------------- */
+
+            .about-layout {
+                display: flex !important;
+
+                flex-direction: column !important;
+
+                gap: 35px !important;
+            }
+
+            .about-content {
+                order: 1 !important;
+
+                width: 100% !important;
+            }
+
+            .about-image {
+                order: 2 !important;
+
+                width: 100% !important;
+
+                height: 380px !important;
+
+                margin: 0 !important;
+
+                border-radius: 22px !important;
+            }
+
+            .about-image img {
+                width: 100% !important;
+                height: 100% !important;
+
+                object-fit: cover !important;
+
+                border-radius: 22px !important;
+            }
+
+        }
+
+
+        /* =========================================================
+   MOBILE
+========================================================= */
+
+        @media(max-width:600px) {
+
+            /* HERO IMAGE FULL EDGE TO EDGE */
+
+            .hero-visual {
+                width: 100vw !important;
+
+                height: 350px !important;
+                min-height: 350px !important;
+
+                left: 50% !important;
+
+                margin-left: -50vw !important;
+                margin-right: -50vw !important;
+
+                border-radius: 0 !important;
+            }
+
+            .hero-main-image {
+                object-position: center center !important;
+            }
+
+
+            /* ABOUT */
+
+            #about {
+                padding-top: 70px !important;
+            }
+
+            .about-layout {
+                gap: 30px !important;
+            }
+
+            .about-content {
+                order: 1 !important;
+            }
+
+            .about-image {
+                order: 2 !important;
+
+                height: 330px !important;
+
+                margin-top: 5px !important;
+
+                border-radius: 20px !important;
+            }
+
+            .about-image img {
+                border-radius: 20px !important;
+            }
+
+        }
+
+
+        /* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+        @media(max-width:420px) {
+
+            .hero-visual {
+                height: 310px !important;
+                min-height: 310px !important;
+            }
+
+            .about-image {
+                height: 290px !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-mobile-navbar-final-fix">
+        /* =========================================================
+   PREVENT MOBILE HORIZONTAL SHIFT
+========================================================= */
+
+        html,
+        body {
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+        }
+
+
+        /* =========================================================
+   MOBILE NAVBAR FINAL FIX
+========================================================= */
+
+        @media(max-width:900px) {
+
+            :root {
+                --header-height: 68px !important;
+            }
+
+
+            /* HEADER */
+
+            .site-header,
+            .site-header.scrolled {
+
+                position: fixed !important;
+
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+
+                width: 100% !important;
+                max-width: 100vw !important;
+
+                height: 68px !important;
+                min-height: 68px !important;
+
+                margin: 0 !important;
+                padding: 0 !important;
+
+                z-index: 99999 !important;
+
+                background:
+                    rgba(255, 255, 255, .97) !important;
+
+                backdrop-filter:
+                    blur(16px) !important;
+
+                -webkit-backdrop-filter:
+                    blur(16px) !important;
+
+                border-bottom:
+                    1px solid rgba(5, 45, 75, .08) !important;
+
+                box-shadow:
+                    0 6px 24px rgba(4, 35, 60, .08) !important;
+
+                transform: none !important;
+            }
+
+
+            /* NAVBAR WRAPPER */
+
+            .site-header .container,
+            .navbar {
+
+                width: 100% !important;
+                max-width: 100% !important;
+
+                height: 68px !important;
+
+                margin: 0 !important;
+
+                padding:
+                    0 14px !important;
+
+                display: flex !important;
+
+                align-items: center !important;
+                justify-content: space-between !important;
+
+                gap: 12px !important;
+            }
+
+
+            /* LOGO */
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+
+                width: auto !important;
+                max-width: 105px !important;
+
+                height: 56px !important;
+
+                margin: 0 !important;
+
+                display: flex !important;
+
+                align-items: center !important;
+                justify-content: flex-start !important;
+
+                overflow: visible !important;
+
+                flex-shrink: 0 !important;
+            }
+
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+
+                display: block !important;
+
+                width: auto !important;
+                max-width: 105px !important;
+
+                height: 50px !important;
+
+                margin: 0 !important;
+
+                object-fit: contain !important;
+
+                transform: none !important;
+            }
+
+
+            /* HAMBURGER */
+
+            .hamburger {
+
+                display: grid !important;
+
+                place-items: center !important;
+
+                width: 42px !important;
+                height: 42px !important;
+
+                min-width: 42px !important;
+
+                padding: 0 !important;
+
+                margin: 0 !important;
+
+                border:
+                    1px solid #d8e6ef !important;
+
+                border-radius: 11px !important;
+
+                background:
+                    #f5f9fc !important;
+
+                color: #082b46 !important;
+
+                font-size: 17px !important;
+
+                cursor: pointer !important;
+
+                position: relative !important;
+
+                z-index: 100002 !important;
+            }
+
+
+            /* =====================================================
+       MOBILE DROPDOWN
+    ===================================================== */
+
+            .nav-right {
+
+                position: fixed !important;
+
+                top: 68px !important;
+                left: 0 !important;
+                right: 0 !important;
+
+                width: 100% !important;
+                max-width: 100vw !important;
+
+                height: auto !important;
+                max-height:
+                    calc(100svh - 68px) !important;
+
+                margin: 0 !important;
+
+                padding:
+                    18px 18px 22px !important;
+
+                display: flex !important;
+
+                flex-direction: column !important;
+
+                align-items: stretch !important;
+
+                gap: 14px !important;
+
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+
+                background:
+                    rgba(255, 255, 255, .99) !important;
+
+                backdrop-filter:
+                    blur(20px) !important;
+
+                -webkit-backdrop-filter:
+                    blur(20px) !important;
+
+                border-top:
+                    1px solid #edf2f5 !important;
+
+                box-shadow:
+                    0 20px 45px rgba(4, 36, 60, .13) !important;
+
+
+                opacity: 0 !important;
+                visibility: hidden !important;
+
+                pointer-events: none !important;
+
+                transform:
+                    translateY(-12px) !important;
+
+                transition:
+                    opacity .28s ease,
+                    visibility .28s ease,
+                    transform .28s ease !important;
+
+                z-index: 100000 !important;
+            }
+
+
+            .nav-right.open {
+
+                opacity: 1 !important;
+                visibility: visible !important;
+
+                pointer-events: auto !important;
+
+                transform:
+                    translateY(0) !important;
+            }
+
+
+            /* LINKS */
+
+            .nav-links {
+
+                width: 100% !important;
+
+                display: flex !important;
+
+                flex-direction: column !important;
+
+                align-items: stretch !important;
+
+                gap: 3px !important;
+
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+
+            .nav-links li {
+
+                width: 100% !important;
+
+                list-style: none !important;
+            }
+
+
+            .nav-link {
+
+                width: 100% !important;
+
+                min-height: 44px !important;
+
+                padding:
+                    0 12px !important;
+
+                display: flex !important;
+
+                align-items: center !important;
+
+                border-radius: 9px !important;
+
+                color: #17364f !important;
+
+                font-size: 12px !important;
+                font-weight: 700 !important;
+
+                transition:
+                    background .25s ease,
+                    color .25s ease !important;
+            }
+
+
+            .nav-link::after {
+
+                display: none !important;
+            }
+
+
+            .nav-link:hover,
+            .nav-link.active {
+
+                color: #0878ee !important;
+
+                background:
+                    #eef7ff !important;
+            }
+
+
+            /* ACTION BUTTONS */
+
+            .nav-actions {
+
+                width: 100% !important;
+
+                display: grid !important;
+
+                grid-template-columns: 1fr !important;
+
+                gap: 9px !important;
+            }
+
+
+            .nav-calculator,
+            .nav-login {
+
+                width: 100% !important;
+
+                min-height: 46px !important;
+
+                display: flex !important;
+
+                align-items: center !important;
+                justify-content: center !important;
+
+                margin: 0 !important;
+
+                border-radius: 11px !important;
+
+                font-size: 11px !important;
+                font-weight: 800 !important;
+            }
+
+
+            .nav-login {
+
+                border:
+                    1px solid #d7e6ef !important;
+
+                background:
+                    #f8fbfd !important;
+
+                color: #153752 !important;
+            }
+
+
+            /* Ensure page content starts below header */
+
+            .hero {
+
+                margin-top:
+                    68px !important;
+            }
+
+        }
+
+
+        /* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+        @media(max-width:480px) {
+
+            .site-header .container,
+            .navbar {
+
+                padding:
+                    0 12px !important;
+            }
+
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+
+                max-width: 96px !important;
+            }
+
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+
+                max-width: 96px !important;
+
+                height: 46px !important;
+            }
+
+
+            .hamburger {
+
+                width: 40px !important;
+                height: 40px !important;
+
+                min-width: 40px !important;
+            }
+
+
+            .nav-right {
+
+                padding:
+                    15px 14px 20px !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-mobile-logo-size-fix">
+        /* =========================================================
+   MOBILE LOGO SIZE FIX
+========================================================= */
+
+        @media(max-width:900px) {
+
+            .site-header,
+            .site-header.scrolled {
+                height: 74px !important;
+                min-height: 74px !important;
+            }
+
+            .site-header .container,
+            .navbar {
+                height: 74px !important;
+
+                padding:
+                    0 14px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                width: 145px !important;
+                max-width: 145px !important;
+
+                height: 66px !important;
+
+                flex-shrink: 0 !important;
+
+                overflow: visible !important;
+            }
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+                width: auto !important;
+                max-width: 145px !important;
+
+                height: 62px !important;
+
+                object-fit: contain !important;
+
+                transform: none !important;
+            }
+
+            .hamburger {
+                width: 42px !important;
+                height: 42px !important;
+
+                min-width: 42px !important;
+            }
+
+            .nav-right {
+                top: 74px !important;
+
+                max-height:
+                    calc(100svh - 74px) !important;
+            }
+
+            .hero {
+                margin-top: 74px !important;
+            }
+
+        }
+
+
+        /* SMALL MOBILE */
+
+        @media(max-width:480px) {
+
+            .site-header,
+            .site-header.scrolled {
+                height: 72px !important;
+                min-height: 72px !important;
+            }
+
+            .site-header .container,
+            .navbar {
+                height: 72px !important;
+
+                padding:
+                    0 12px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                width: 132px !important;
+                max-width: 132px !important;
+
+                height: 64px !important;
+            }
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+                max-width: 132px !important;
+
+                height: 59px !important;
+            }
+
+            .nav-right {
+                top: 72px !important;
+
+                max-height:
+                    calc(100svh - 72px) !important;
+            }
+
+            .hero {
+                margin-top: 72px !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-mobile-logo-bigger-fix">
+        /* =========================================================
+   BIGGER MOBILE LOGO
+========================================================= */
+
+        @media(max-width:900px) {
+
+            .site-header,
+            .site-header.scrolled {
+                height: 80px !important;
+                min-height: 80px !important;
+            }
+
+            .site-header .container,
+            .navbar {
+                height: 80px !important;
+
+                padding:
+                    0 14px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                width: 170px !important;
+                max-width: 170px !important;
+
+                height: 72px !important;
+
+                flex-shrink: 0 !important;
+
+                overflow: visible !important;
+            }
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+                width: auto !important;
+                max-width: 170px !important;
+
+                height: 68px !important;
+
+                object-fit: contain !important;
+
+                transform: none !important;
+            }
+
+            .nav-right {
+                top: 80px !important;
+
+                max-height:
+                    calc(100svh - 80px) !important;
+            }
+
+            .hero {
+                margin-top: 80px !important;
+            }
+
+        }
+
+
+        /* SMALL MOBILE */
+
+        @media(max-width:480px) {
+
+            .site-header,
+            .site-header.scrolled {
+                height: 78px !important;
+                min-height: 78px !important;
+            }
+
+            .site-header .container,
+            .navbar {
+                height: 78px !important;
+
+                padding:
+                    0 10px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                width: 158px !important;
+                max-width: 158px !important;
+
+                height: 70px !important;
+            }
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+                max-width: 158px !important;
+
+                height: 66px !important;
+            }
+
+            .nav-right {
+                top: 78px !important;
+
+                max-height:
+                    calc(100svh - 78px) !important;
+            }
+
+            .hero {
+                margin-top: 78px !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-mobile-logo-xl-fix">
+        @media(max-width:900px) {
+
+            .site-header,
+            .site-header.scrolled {
+                height: 88px !important;
+                min-height: 88px !important;
+            }
+
+            .site-header .container,
+            .navbar {
+                height: 88px !important;
+                padding: 0 14px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                width: 205px !important;
+                max-width: 205px !important;
+                height: 82px !important;
+
+                display: flex !important;
+                align-items: center !important;
+
+                flex-shrink: 0 !important;
+                overflow: visible !important;
+            }
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+                width: 205px !important;
+                max-width: 205px !important;
+                height: 78px !important;
+
+                object-fit: contain !important;
+
+                margin: 0 !important;
+                transform: none !important;
+            }
+
+            .hamburger {
+                width: 44px !important;
+                height: 44px !important;
+                min-width: 44px !important;
+
+                flex-shrink: 0 !important;
+            }
+
+            .nav-right {
+                top: 88px !important;
+                max-height: calc(100svh - 88px) !important;
+            }
+
+            .hero {
+                margin-top: 88px !important;
+            }
+
+        }
+
+
+        @media(max-width:480px) {
+
+            .site-header,
+            .site-header.scrolled {
+                height: 86px !important;
+                min-height: 86px !important;
+            }
+
+            .site-header .container,
+            .navbar {
+                height: 86px !important;
+                padding: 0 10px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                width: 190px !important;
+                max-width: 190px !important;
+                height: 80px !important;
+            }
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+                width: 190px !important;
+                max-width: 190px !important;
+                height: 76px !important;
+            }
+
+            .nav-right {
+                top: 86px !important;
+                max-height: calc(100svh - 86px) !important;
+            }
+
+            .hero {
+                margin-top: 86px !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-mobile-logo-left-fix">
+        @media(max-width:900px) {
+
+            .site-header .container,
+            .navbar {
+                justify-content: space-between !important;
+
+                padding-left: 6px !important;
+                padding-right: 14px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                margin-left: -4px !important;
+
+                justify-content: flex-start !important;
+            }
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+                margin-left: 0 !important;
+
+                transform: none !important;
+            }
+
+        }
+
+
+        @media(max-width:480px) {
+
+            .site-header .container,
+            .navbar {
+                padding-left: 4px !important;
+                padding-right: 10px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                margin-left: -2px !important;
+            }
+
+        }
+    </style>
+
+
+    <style id="arima-mobile-logo-more-left">
+        @media(max-width:900px) {
+
+            .site-header .container,
+            .navbar {
+                padding-left: 0 !important;
+                padding-right: 14px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                margin-left: -18px !important;
+            }
+
+            .brand-logo img,
+            .site-header.scrolled .brand-logo img {
+                margin-left: 0 !important;
+                transform: none !important;
+            }
+
+        }
+
+        @media(max-width:480px) {
+
+            .site-header .container,
+            .navbar {
+                padding-left: 0 !important;
+                padding-right: 10px !important;
+            }
+
+            .brand-logo,
+            .site-header.scrolled .brand-logo {
+                margin-left: -22px !important;
+            }
+
+        }
+    </style>
+
+<link rel="stylesheet" href="assets/css/arima-logo-adjust.css?v=1">
+  <link rel="stylesheet" href="assets/css/arima-premium-products.css?v=20261014-pages3">
+<link rel="stylesheet" href="assets/css/arima-premium-v6.css?v=6">
+
+<link rel="stylesheet" href="assets/css/arima-v8-premium.css?v=8">
+<link rel="stylesheet" href="assets/css/arima-v7.css?v=20261014-restore">
+<link rel="stylesheet" href="assets/css/arima-nav-underline-fix.css?v=1">
+</head>
+
+
+<body>
+<!-- ARIMA MOTION LOADER V28 START -->
+<style id="arima-motion-loader-v28-style">
+#arima-motion-loader-v28{position:fixed!important;inset:0!important;z-index:2147483600!important;display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;padding:clamp(8px,2vw,24px)!important;overflow:hidden!important;background:#061c2b!important;opacity:1;visibility:visible;transition:opacity .32s ease,visibility .32s ease}
+#arima-motion-loader-v28,#arima-motion-loader-v28 *{box-sizing:border-box!important}
+#arima-motion-loader-v28.ar28-hidden{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+#arima-motion-loader-v28 .ar28-content{width:min(960px,96vw)!important;max-width:100%!important;max-height:calc(100dvh - 22px)!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:12px!important;position:relative!important}
+#arima-motion-loader-v28 .ar28-video{display:block!important;position:static!important;width:auto!important;height:auto!important;max-width:100%!important;max-height:calc(100dvh - 85px)!important;aspect-ratio:960 / 716!important;object-fit:contain!important;object-position:center center!important;transform:none!important;filter:none!important;border:0!important;box-shadow:none!important;background:#061c2b!important}
+#arima-motion-loader-v28 .ar28-bottom{width:min(440px,82vw)!important;display:flex!important;align-items:center!important;gap:12px!important;flex:none!important}
+#arima-motion-loader-v28 .ar28-track{flex:1!important;height:4px!important;border-radius:10px!important;background:#2a5062!important;overflow:hidden!important}
+#arima-motion-loader-v28 .ar28-fill{display:block!important;width:0%!important;height:100%!important;background:linear-gradient(90deg,#08b6ef,#30dec9,#bdf477)!important;border-radius:inherit!important;transition:width .15s linear!important}
+#arima-motion-loader-v28 .ar28-skip{appearance:none!important;border:1px solid rgba(187,230,233,.36)!important;background:rgba(12,55,69,.86)!important;color:#e8fffa!important;border-radius:100px!important;padding:7px 13px!important;line-height:1.1!important;font:600 12px/1.1 Arial,sans-serif!important;cursor:pointer!important;flex:none!important;position:static!important;box-shadow:none!important;transform:none!important}
+#arima-motion-loader-v28 .ar28-skip:hover{background:#136076!important}
+@media(max-width:600px){#arima-motion-loader-v28{padding:8px!important}#arima-motion-loader-v28 .ar28-content{width:100%!important;gap:9px!important}#arima-motion-loader-v28 .ar28-video{max-height:calc(100dvh - 65px)!important}}
+@media(prefers-reduced-motion:reduce){#arima-motion-loader-v28{transition:none!important}#arima-motion-loader-v28 .ar28-fill{transition:none!important}}
+</style>
+<div id="arima-motion-loader-v28" role="status" aria-label="Arima Chemical reaction introduction">
+ <div class="ar28-content">
+  <video class="ar28-video" muted autoplay playsinline preload="auto" width="960" height="716" poster="assets/images/arima-chemical-motion-poster-v28.webp" aria-label="Blue and green chemicals pouring into a glass flask">
+   <source src="assets/videos/arima-chemical-mixing-v28.mp4" type="video/mp4">
+  </video>
+  <div class="ar28-bottom"><div class="ar28-track" aria-hidden="true"><span class="ar28-fill"></span></div><button class="ar28-skip" type="button">Skip</button></div>
+ </div>
+</div>
+<script id="arima-motion-loader-v28-script">
+(function(){'use strict';var box=document.getElementById('arima-motion-loader-v28');if(!box)return;
+var video=box.querySelector('video'),fill=box.querySelector('.ar28-fill'),skip=box.querySelector('.ar28-skip');
+var start=performance.now(),done=false,max=3400;
+function close(){if(done)return;done=true;box.classList.add('ar28-hidden');if(video)video.pause();setTimeout(function(){if(box.parentNode)box.parentNode.removeChild(box)},380)}
+function progress(){if(done)return;var pct=Math.min(99,100*(performance.now()-start)/3000);if(fill)fill.style.width=pct+'%';requestAnimationFrame(progress)}
+if(skip)skip.addEventListener('click',close,{once:true});
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){close();return}
+if(video){video.addEventListener('ended',close,{once:true});video.addEventListener('error',close,{once:true});var promise=video.play();if(promise&&promise.catch)promise.catch(function(){setTimeout(close,600)})}
+requestAnimationFrame(progress);setTimeout(close,max);
+})();
+</script>
+<!-- ARIMA MOTION LOADER V28 END -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container navbar">
+
+            <a href="#home" class="brand-logo">
+
+                <!--
+                IMPORTANT:
+                Save your original Arima logo as:
+                assets/images/arima-logo.png
+            -->
+
+                <img src="assets/images/arima-logo.png" alt="Arima Chemical">
+
+            </a>
+
+
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div class="nav-right" id="navMenu">
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="#home" class="nav-link active">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="nav-link">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#products" class="nav-link">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#applications" class="nav-link">
+                            Applications
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#industries" class="nav-link">
+                            Industries
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <div class="nav-actions">
+
+                    <a href="dosage-calculator.html" class="nav-calculator">
+
+                        <i class="fa-solid fa-calculator"></i>
+
+                        Dosage Calculator
+
+                    </a>
+
+
+                    <a href="login.html" class="nav-login"><i class="fa-regular fa-user"></i> Login</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-wave"></div>
+        <div class="hero-wave wave-2"></div>
+
+
+        <div class="container hero-layout">
+
+            <div class="hero-copy">
+
+                <div class="hero-eyebrow reveal">
+
+                    Chemistry for a cleaner tomorrow
+
+                </div>
+
+
+                <h1 class="hero-title reveal" data-delay="100">
+
+                    Precision Chemical
+                    Solutions for
+
+                    <span class="accent">
+                        Water,
+                        Industry &
+                        Performance
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description reveal" data-delay="200">
+
+                    Arima Chemical delivers high-performance
+                    chemical solutions for water treatment,
+                    industrial processes and cleaner,
+                    healthier environments.
+
+                </p>
+
+
+                <div class="hero-buttons reveal" data-delay="300">
+
+                    <a href="#products" class="btn btn-primary">
+
+                        Explore Solutions
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="dosage-calculator.html" class="btn btn-outline">
+
+                        <i class="fa-solid fa-calculator"></i>
+
+                        Use Dosage Calculator
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-highlights reveal" data-delay="400">
+
+                    <div class="hero-highlight">
+
+                        <div class="hero-highlight-icon">
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                        </div>
+
+                        <span>
+                            Cleaner Water
+                            <br>
+                            Healthier Communities
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-highlight">
+
+                        <div class="hero-highlight-icon">
+
+                            <i class="fa-solid fa-leaf"></i>
+
+                        </div>
+
+                        <span>
+                            Sustainable
+                            <br>
+                            Chemical Solutions
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-highlight">
+
+                        <div class="hero-highlight-icon">
+
+                            <i class="fa-solid fa-industry"></i>
+
+                        </div>
+
+                        <span>
+                            Trusted by
+                            <br>
+                            Multiple Industries
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual reveal-right">
+
+                <div class="hero-image-shell">
+
+                    <img class="hero-main-image" id="heroImage"
+                        src="https://images.unsplash.com/photo-1742376781032-0bb74747a3a7?auto=format&fit=crop&w=1800&q=88"
+                        alt="Industrial chemical and water treatment">
+
+                </div>
+
+
+                <div class="water-orb"></div>
+
+
+                <div class="molecule mol-1"></div>
+                <div class="molecule mol-2"></div>
+                <div class="molecule mol-3"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     ABOUT
+===================================================== -->
+
+    <section class="section" id="about">
+
+        <div class="container">
+
+            <div class="about-layout">
+
+
+                <!-- IMAGE -->
+
+                <div class="about-image reveal-left">
+
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=88"
+                        alt="Arima Chemical facility" loading="lazy">
+
+
+                    <div class="about-logo-badge">
+
+                        <img src="assets/images/arima-logo.png" alt="Arima Chemical">
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="about-content">
+
+                    <div class="eyebrow reveal">
+
+                        About Arima Chemical
+
+                    </div>
+
+
+                    <h2 class="section-title reveal" data-delay="100">
+
+                        Delivering Trusted
+                        Chemical Solutions for a
+                        <span>Better Tomorrow.</span>
+
+                    </h2>
+
+
+                    <p class="about-description reveal" data-delay="200">
+
+                        Arima Chemical delivers quality-focused
+                        chemical solutions for water treatment,
+                        industrial processes, cleaning and
+                        application-specific requirements.
+
+                        Our approach combines dependable products,
+                        technical understanding and accurate
+                        application guidance to create efficient,
+                        reliable and consistent outcomes.
+
+                    </p>
+
+
+                    <!-- STATS -->
+
+                    <div class="stats reveal" data-delay="300">
+
+                        <div class="stat">
+
+                            <div class="stat-number counter" data-target="10" data-suffix="+">
+
+                                0
+
+                            </div>
+
+                            <div class="stat-label">
+                                Years of Expertise
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <div class="stat-number counter" data-target="500" data-suffix="+">
+
+                                0
+
+                            </div>
+
+                            <div class="stat-label">
+                                Satisfied Clients
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <div class="stat-number counter" data-target="100" data-suffix="+">
+
+                                0
+
+                            </div>
+
+                            <div class="stat-label">
+                                Chemical Solutions
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <div class="stat-number counter" data-target="20" data-suffix="+">
+
+                                0
+
+                            </div>
+
+                            <div class="stat-label">
+                                Industries Served
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FEATURES -->
+
+                    <div class="about-features">
+
+                        <div class="about-feature reveal" data-delay="100">
+
+                            <div class="about-feature-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Quality Focused
+                                </h4>
+
+                                <p>
+                                    Dependable products with
+                                    consistent performance.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="about-feature reveal" data-delay="200">
+
+                            <div class="about-feature-icon">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Technical Expertise
+                                </h4>
+
+                                <p>
+                                    Practical application support
+                                    for better outcomes.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="about-feature reveal" data-delay="300">
+
+                            <div class="about-feature-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Responsible Solutions
+                                </h4>
+
+                                <p>
+                                    Efficient treatment and
+                                    responsible chemical use.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="about-feature reveal" data-delay="400">
+
+                            <div class="about-feature-icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Customer Support
+                                </h4>
+
+                                <p>
+                                    Professional guidance whenever
+                                    you need assistance.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+    <div id="products" class="container">
+
+
+            <div class="section-head reveal">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Our Products
+                    </div>
+
+                    <h2 class="section-title">
+
+                        High-Performance
+                        <span>Chemical Products.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <a href="products.html?category=water" class="section-link">
+
+                    View All Products
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="products-grid">
+
+
+                <!-- 1 -->
+
+                <article class="product-card reveal" data-delay="100">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=85"
+                            alt="Water treatment chemicals" loading="lazy">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3>
+                            Water Treatment Chemicals
+                        </h3>
+
+                        <p>
+                            Professional chemical solutions for
+                            clearer, cleaner and better-managed
+                            water systems.
+                        </p>
+
+                        <a href="products.html?category=water" class="product-link">
+
+                            View Products
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 2 -->
+
+                <article class="product-card reveal" data-delay="200">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85"
+                            alt="Industrial chemicals" loading="lazy">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3>
+                            Industrial Chemicals
+                        </h3>
+
+                        <p>
+                            Chemical products designed for
+                            industrial operations, processing
+                            and maintenance applications.
+                        </p>
+
+                        <a href="products.html?category=industrial" class="product-link">
+
+                            View Products
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 3 -->
+
+                <article class="product-card reveal" data-delay="300">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=85"
+                            alt="Cleaning chemicals" loading="lazy">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3>
+                            Cleaning & Maintenance
+                        </h3>
+
+                        <p>
+                            Effective solutions for hygiene,
+                            cleaning, maintenance and
+                            equipment care.
+                        </p>
+
+                        <a href="products.html?category=cleaning" class="product-link">
+
+                            View Products
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 4 -->
+
+                <article class="product-card reveal" data-delay="400">
+
+                    <div class="product-image">
+
+                        <img src="https://images.unsplash.com/photo-1554475901-4538ddfbccc2?auto=format&fit=crop&w=900&q=85"
+                            alt="Specialty chemical products" loading="lazy">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3>
+                            Bio Chemicals
+                        </h3>
+
+                        <p>
+                            Application-specific solutions
+                            developed around operational
+                            requirements.
+                        </p>
+
+                        <a href="products.html?category=bio" class="product-link">
+
+                            View Products
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+    <!-- =====================================================
+     APPLICATIONS
+===================================================== -->
+
+    <section class="section" id="applications">
+
+        <div class="container">
+
+
+            <div class="section-head reveal">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Applications / Solutions
+                    </div>
+
+                    <h2 class="section-title">
+
+                        Versatile Solutions for
+                        <span>Multiple Applications.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <a href="dosage-calculator.html" class="section-link">
+
+                    Open Dosage Calculator
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="applications-grid">
+
+
+                <article class="application-card reveal" data-delay="100">
+
+                    <div class="application-image">
+
+                        <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=700&q=85"
+                            alt="Swimming pool treatment" loading="lazy">
+
+                    </div>
+
+                    <div class="application-body">
+
+                        <h3>
+                            Swimming Pool
+                            Water Treatment
+                        </h3>
+
+                        <p>
+                            Professional solutions for cleaner
+                            and better-maintained swimming pools.
+                        </p>
+
+                        <div class="app-arrow">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="application-card reveal" data-delay="200">
+
+                    <div class="application-image">
+
+                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=85"
+                            alt="Septic tank treatment" loading="lazy">
+
+                    </div>
+
+                    <div class="application-body">
+
+                        <h3>
+                            Septic Tank
+                            Treatment
+                        </h3>
+
+                        <p>
+                            Treatment solutions for septic and
+                            waste-management applications.
+                        </p>
+
+                        <div class="app-arrow">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="application-card reveal" data-delay="300">
+
+                    <div class="application-image">
+
+                        <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=700&q=85"
+                            alt="Water treatment" loading="lazy">
+
+                    </div>
+
+                    <div class="application-body">
+
+                        <h3>
+                            Water
+                            Treatment
+                        </h3>
+
+                        <p>
+                            Reliable treatment for water systems
+                            across multiple applications.
+                        </p>
+
+                        <div class="app-arrow">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="application-card reveal" data-delay="400">
+
+                    <div class="application-image">
+
+                        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=700&q=85"
+                            alt="Industrial chemical applications" loading="lazy">
+
+                    </div>
+
+                    <div class="application-body">
+
+                        <h3>
+                            Industrial
+                            Applications
+                        </h3>
+
+                        <p>
+                            Chemicals for diverse industrial
+                            processes and operational needs.
+                        </p>
+
+                        <div class="app-arrow">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="application-card reveal" data-delay="500">
+
+                    <div class="application-image">
+
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=85"
+                            alt="Cleaning and maintenance solutions" loading="lazy">
+
+                    </div>
+
+                    <div class="application-body">
+
+                        <h3>
+                            Cleaning &
+                            Maintenance
+                        </h3>
+
+                        <p>
+                            Effective solutions for cleaner
+                            working environments.
+                        </p>
+
+                        <div class="app-arrow">
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+    <section class="section section-soft" id="industries">
+
+        <div class="container">
+
+            <div class="why-layout">
+
+
+                <div class="reveal-left">
+
+                    <div class="eyebrow">
+
+                        Why Choose Arima Chemical
+
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        Our Commitment
+                        Creates
+                        <span>Real Value.</span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        From product quality to dosage guidance,
+                        Arima Chemical focuses on dependable
+                        solutions and professional application
+                        support.
+
+                    </p>
+
+                </div>
+
+
+                <div class="why-grid">
+
+
+                    <div class="why-card reveal" data-delay="100">
+
+                        <div class="why-icon">
+
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+                        <h3>
+                            Premium Quality
+                        </h3>
+
+                        <p>
+                            Reliable chemical solutions developed
+                            for consistent performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card reveal" data-delay="200">
+
+                        <div class="why-icon">
+
+                            <i class="fa-solid fa-flask"></i>
+
+                        </div>
+
+                        <h3>
+                            Technical Expertise
+                        </h3>
+
+                        <p>
+                            Application understanding backed by
+                            professional technical guidance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card reveal" data-delay="300">
+
+                        <div class="why-icon">
+
+                            <i class="fa-solid fa-shield"></i>
+
+                        </div>
+
+                        <h3>
+                            Reliable Solutions
+                        </h3>
+
+                        <p>
+                            Practical treatment options for
+                            different industry requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card reveal" data-delay="100">
+
+                        <div class="why-icon">
+
+                            <i class="fa-solid fa-calculator"></i>
+
+                        </div>
+
+                        <h3>
+                            Application-Specific Dosage
+                        </h3>
+
+                        <p>
+                            Configured dosage recommendations for
+                            supported applications.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card reveal" data-delay="200">
+
+                        <div class="why-icon">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                        </div>
+
+                        <h3>
+                            Professional Support
+                        </h3>
+
+                        <p>
+                            Our team is available to help customers
+                            choose appropriate solutions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card reveal" data-delay="300">
+
+                        <div class="why-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <h3>
+                            Consistent Results
+                        </h3>
+
+                        <p>
+                            Designed around dependable treatment
+                            and measurable application outcomes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     DOSAGE CALCULATOR PROMO
+===================================================== -->
+
+    <section class="calculator-promo">
+
+        <div class="container">
+
+            <div class="calc-layout">
+
+
+                <div class="calc-copy reveal-left">
+
+                    <div class="eyebrow">
+                        Smart Solutions
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        Chemical Dosage
+                        Calculator
+
+                    </h2>
+
+
+                    <p>
+
+                        Get configured chemical dosage
+                        recommendations for supported applications.
+                        Simple, fast and easy to understand.
+
+                    </p>
+
+
+                    <div class="calc-benefits">
+
+
+                        <div class="calc-benefit">
+
+                            <i class="fa-solid fa-gauge-high"></i>
+
+                            Quick & Accurate Results
+
+                        </div>
+
+
+                        <div class="calc-benefit">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            Multiple Applications
+
+                        </div>
+
+
+                        <div class="calc-benefit">
+
+                            <i class="fa-solid fa-flask"></i>
+
+                            Admin Managed Rules
+
+                        </div>
+
+
+                        <div class="calc-benefit">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            Save Time
+
+                        </div>
+
+                    </div>
+
+
+                    <div style="margin-top:28px">
+
+                        <a href="dosage-calculator.html" class="btn btn-primary">
+
+                            Start Calculation
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- calculator preview -->
+
+                <div class="calculator-demo reveal-right">
+
+
+                    <div class="demo-steps">
+
+                        <div class="demo-step active">
+
+                            <span class="demo-step-number">
+                                1
+                            </span>
+
+                            Application
+
+                        </div>
+
+
+                        <div class="demo-step">
+
+                            <span class="demo-step-number">
+                                2
+                            </span>
+
+                            Parameters
+
+                        </div>
+
+
+                        <div class="demo-step">
+
+                            <span class="demo-step-number">
+                                3
+                            </span>
+
+                            Results
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="demo-title">
+
+                        Select Application
+
+                    </div>
+
+
+                    <div class="demo-options">
+
+
+                        <div class="demo-option active">
+
+                            <i class="fa-solid fa-water-ladder"></i>
+
+                            Swimming Pool
+
+                        </div>
+
+
+                        <div class="demo-option">
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                            Water Treatment
+
+                        </div>
+
+
+                        <div class="demo-option">
+
+                            <i class="fa-solid fa-box"></i>
+
+                            Septic Tank
+
+                        </div>
+
+
+                        <div class="demo-option">
+
+                            <i class="fa-solid fa-industry"></i>
+
+                            Industrial
+
+                        </div>
+
+
+                    </div>
+
+
+                    <button class="demo-next" onclick="window.location.href='dosage-calculator.html'">
+
+                        Next Step
+
+                        &nbsp;
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     CONTACT
+===================================================== -->
+
+    <section class="section" id="contact">
+
+        <div class="container">
+
+            <div class="contact-layout">
+
+
+                <!-- CONTACT COPY -->
+
+                <div class="reveal-left">
+
+                    <div class="eyebrow">
+
+                        Get In Touch
+
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        Let's Build a Cleaner,
+                        Healthier Tomorrow
+                        <span>Together.</span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        Have questions about our products,
+                        application requirements or dosage?
+                        Our team can help you identify an
+                        appropriate chemical solution.
+
+                    </p>
+
+
+                    <div class="contact-info">
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Contact
+                                </strong>
+
+                                <span>
+                                    +91 98765 43210
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Email
+                                </strong>
+
+                                <span>
+                                    info@arimachemical.com
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Location
+                                </strong>
+
+                                <span>
+                                    India
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form class="contact-form reveal-right" id="contactForm">
+
+                    <h3>
+                        Send Us a Message
+                    </h3>
+
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <input class="form-control" type="text" placeholder="Your Name *" required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <input class="form-control" type="email" placeholder="Your Email *" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <input class="form-control" type="text" placeholder="Subject">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <textarea class="form-control" placeholder="Your Message *" required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary submit-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+                    <div style="clear:both"></div>
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+
+    <footer class="arima-pro-footer">
+
+        <div class="arima-footer-glow glow-one"></div>
+        <div class="arima-footer-glow glow-two"></div>
+
+        <div class="container arima-footer-main">
+
+            <!-- BRAND -->
+            <div class="arima-footer-brand">
+
+                <a href="#home" class="arima-footer-logo">
+                    <img src="assets/images/arima-logo.png" alt="Arima Chemical">
+                </a>
+
+                <p>
+                    Precision chemical solutions for water treatment,
+                    industrial applications and cleaner, more efficient
+                    environments.
+                </p>
+
+                <div class="arima-footer-socials">
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="arima-footer-column">
+
+                <h4>Company</h4>
+
+                <a href="#home">
+                    <span>Home</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#about">
+                    <span>About Us</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#products">
+                    <span>Products</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#applications">
+                    <span>Applications</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#contact">
+                    <span>Contact</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <!-- SOLUTIONS -->
+            <div class="arima-footer-column">
+
+                <h4>Solutions</h4>
+
+                <a href="#applications">
+                    <span>Swimming Pool Treatment</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#applications">
+                    <span>Septic Tank Treatment</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#applications">
+                    <span>Water Treatment</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#applications">
+                    <span>Industrial Solutions</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#applications">
+                    <span>Cleaning Solutions</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <!-- CTA -->
+            <div class="arima-footer-cta">
+
+                <span class="arima-footer-small">
+                    SMART TREATMENT SUPPORT
+                </span>
+
+                <h3>
+                    Need the right
+                    chemical dosage?
+                </h3>
+
+                <p>
+                    Use our configured dosage calculator to get
+                    application-specific recommendations.
+                </p>
+
+                <a href="dosage-calculator.html" class="arima-footer-calculator">
+
+                    <i class="fa-solid fa-calculator"></i>
+
+                    <span>
+                        Open Dosage Calculator
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT STRIP -->
+
+        <div class="container arima-footer-contact-strip">
+
+            <div class="arima-footer-contact-item">
+
+                <span class="contact-round-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </span>
+
+                <div>
+                    <small>Talk to our team</small>
+                    <strong>Contact Arima Chemical</strong>
+                </div>
+
+            </div>
+
+
+            <div class="arima-footer-contact-item">
+
+                <span class="contact-round-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+
+                <div>
+                    <small>Email support</small>
+                    <strong>info@arimachemical.com</strong>
+                </div>
+
+            </div>
+
+
+            <div class="arima-footer-contact-item">
+
+                <span class="contact-round-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </span>
+
+                <div>
+                    <small>Serving customers</small>
+                    <strong>Across India</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM -->
+
+        <div class="arima-footer-bottom">
+
+            <div class="container arima-footer-bottom-inner">
+
+                <p>
+                    Ã‚Â© <span id="footerYear"></span>
+                    Arima Chemical.
+                    All rights reserved.
+                </p>
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <span></span>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script>
+
+        /* =====================================================
+           HEADER SCROLL
+        ===================================================== */
+
+        const header =
+            document.getElementById("siteHeader");
+
+        function updateHeader() {
+
+            if (window.scrollY > 30) {
+
+                header.classList.add("scrolled");
+
+            } else {
+
+                header.classList.remove("scrolled");
+
+            }
+
+        }
+
+        updateHeader();
+
+        window.addEventListener(
+            "scroll",
+            updateHeader,
+            { passive: true }
+        );
+
+
+        /* =====================================================
+           MOBILE NAV
+        ===================================================== */
+
+        const hamburger =
+            document.getElementById("hamburger");
+
+        const navMenu =
+            document.getElementById("navMenu");
+
+        const hamburgerIcon =
+            hamburger.querySelector("i");
+
+
+        hamburger.addEventListener(
+            "click",
+            () => {
+
+                navMenu.classList.toggle("open");
+
+                const isOpen =
+                    navMenu.classList.contains("open");
+
+                hamburgerIcon.className =
+                    isOpen
+                        ? "fa-solid fa-xmark"
+                        : "fa-solid fa-bars";
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(".nav-link")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        navMenu.classList.remove("open");
+
+                        hamburgerIcon.className =
+                            "fa-solid fa-bars";
+
+                    }
+                );
+
+            });
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        const revealItems =
+            document.querySelectorAll(
+                ".reveal, .reveal-left, .reveal-right, .reveal-scale"
+            );
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target
+                                .classList
+                                .add("visible");
+
+                            revealObserver
+                                .unobserve(
+                                    entry.target
+                                );
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12,
+                    rootMargin:
+                        "0px 0px -35px 0px"
+                }
+
+            );
+
+
+        revealItems.forEach(item => {
+
+            revealObserver.observe(item);
+
+        });
+
+
+        /* =====================================================
+           COUNTERS
+        ===================================================== */
+
+        const counters =
+            document.querySelectorAll(
+                ".counter"
+            );
+
+        let countersStarted = false;
+
+
+        function animateCounter(
+            element
+        ) {
+
+            const target =
+                Number(
+                    element.dataset.target
+                );
+
+            const suffix =
+                element.dataset.suffix || "";
+
+            const duration = 1500;
+
+            const startTime =
+                performance.now();
+
+
+            function update(
+                currentTime
+            ) {
+
+                const elapsed =
+                    currentTime -
+                    startTime;
+
+                const progress =
+                    Math.min(
+                        elapsed /
+                        duration,
+                        1
+                    );
+
+                const eased =
+                    1 -
+                    Math.pow(
+                        1 - progress,
+                        3
+                    );
+
+                const value =
+                    Math.floor(
+                        target *
+                        eased
+                    );
+
+                element.textContent =
+                    value + suffix;
+
+                if (
+                    progress < 1
+                ) {
+
+                    requestAnimationFrame(
+                        update
+                    );
+
+                }
+
+            }
+
+            requestAnimationFrame(
+                update
+            );
+
+        }
+
+
+        const stats =
+            document.querySelector(
+                ".stats"
+            );
+
+
+        if (stats) {
+
+            const counterObserver =
+                new IntersectionObserver(
+
+                    entries => {
+
+                        entries.forEach(
+                            entry => {
+
+                                if (
+                                    entry.isIntersecting &&
+                                    !countersStarted
+                                ) {
+
+                                    countersStarted = true;
+
+                                    counters
+                                        .forEach(
+                                            animateCounter
+                                        );
+
+                                    counterObserver
+                                        .disconnect();
+
+                                }
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: .3
+                    }
+
+                );
+
+
+            counterObserver
+                .observe(stats);
+
+        }
+
+
+        /* =====================================================
+           ACTIVE NAVIGATION
+        ===================================================== */
+
+        const pageSections =
+            document.querySelectorAll(
+                "section[id]"
+            );
+
+        const menuLinks =
+            document.querySelectorAll(
+                ".nav-link"
+            );
+
+
+        const navObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                const id =
+                                    entry
+                                        .target
+                                        .getAttribute(
+                                            "id"
+                                        );
+
+                                menuLinks
+                                    .forEach(
+                                        link => {
+
+                                            link
+                                                .classList
+                                                .remove(
+                                                    "active"
+                                                );
+
+                                            if (
+                                                link
+                                                    .getAttribute(
+                                                        "href"
+                                                    ) ===
+                                                "#" + id
+                                            ) {
+
+                                                link
+                                                    .classList
+                                                    .add(
+                                                        "active"
+                                                    );
+
+                                            }
+
+                                        }
+                                    );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: .2,
+
+                    rootMargin:
+                        "-30% 0px -55% 0px"
+                }
+
+            );
+
+
+        pageSections
+            .forEach(
+                section => {
+
+                    navObserver
+                        .observe(section);
+
+                }
+            );
+
+
+        /* =====================================================
+           HERO PARALLAX
+        ===================================================== */
+
+        const heroImage =
+            document.getElementById(
+                "heroImage"
+            );
+
+
+        let ticking = false;
+
+
+        function updateParallax() {
+
+            const scroll =
+                window.scrollY;
+
+            if (
+                scroll < 850
+            ) {
+
+                const move =
+                    scroll * .025;
+
+                heroImage.style.transform =
+                    `scale(1.08)
+                 translateY(${move}px)`;
+
+            }
+
+            ticking = false;
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                if (
+                    !ticking
+                ) {
+
+                    requestAnimationFrame(
+                        updateParallax
+                    );
+
+                    ticking = true;
+
+                }
+
+            },
+
+            {
+                passive: true
+            }
+        );
+
+
+        /* =====================================================
+           SUBTLE CARD TILT
+        ===================================================== */
+
+        const hoverCards =
+            document.querySelectorAll(
+                ".product-card, .why-card"
+            );
+
+
+        hoverCards.forEach(card => {
+
+            card.addEventListener(
+                "mousemove",
+                e => {
+
+                    if (
+                        window.innerWidth < 900
+                    ) {
+                        return;
+                    }
+
+                    const rect =
+                        card.getBoundingClientRect();
+
+                    const x =
+                        e.clientX -
+                        rect.left;
+
+                    const y =
+                        e.clientY -
+                        rect.top;
+
+                    const rotateX =
+                        (
+                            y /
+                            rect.height -
+                            .5
+                        ) * -2.5;
+
+                    const rotateY =
+                        (
+                            x /
+                            rect.width -
+                            .5
+                        ) * 2.5;
+
+                    card.style.transform =
+                        `
+                    translateY(-8px)
+                    perspective(900px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    `;
+
+                }
+            );
+
+
+            card.addEventListener(
+                "mouseleave",
+                () => {
+
+                    card.style.transform =
+                        "";
+
+                }
+            );
+
+        });
+
+
+        /* =====================================================
+           CONTACT FORM DEMO
+        ===================================================== */
+
+        const contactForm =
+            document.getElementById(
+                "contactForm"
+            );
+
+
+        contactForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+                const button =
+                    contactForm.querySelector(
+                        ".submit-btn"
+                    );
+
+                const original =
+                    button.innerHTML;
+
+                button.innerHTML =
+                    `
+                <i class="fa-solid fa-circle-check"></i>
+                Message Ready
+                `;
+
+                setTimeout(
+                    () => {
+
+                        button.innerHTML =
+                            original;
+
+                        contactForm.reset();
+
+                    },
+                    1800
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           YEAR
+        ===================================================== */
+
+        document.getElementById(
+            "year"
+        ).textContent =
+            new Date()
+                .getFullYear();
+
+
+    </script>
+
+
+    <script id="arima-footer-year">
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const footerYear =
+                document.getElementById("footerYear");
+
+            if (footerYear) {
+                footerYear.textContent =
+                    new Date().getFullYear();
+            }
+
+        });
+    </script>
+
+
+    <script id="arima-demo-select-script">
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const calculatorDemo =
+                document.querySelector(".calculator-demo");
+
+            if (!calculatorDemo) return;
+
+
+            const options =
+                calculatorDemo.querySelectorAll(".demo-option");
+
+            const nextButton =
+                calculatorDemo.querySelector(".demo-next");
+
+
+            let selectedApplication = "swimming-pool";
+
+
+            const applicationMap = {
+                "Swimming Pool": "swimming-pool",
+                "Water Treatment": "water-treatment",
+                "Septic Tank": "septic-tank",
+                "Industrial": "industrial"
+            };
+
+
+            function selectApplication(option) {
+
+                options.forEach(item => {
+                    item.classList.remove("active");
+                    item.setAttribute("aria-selected", "false");
+                });
+
+                option.classList.add("active");
+
+                option.setAttribute(
+                    "aria-selected",
+                    "true"
+                );
+
+                const applicationName =
+                    option.textContent.trim();
+
+                selectedApplication =
+                    applicationMap[applicationName]
+                    || applicationName
+                        .toLowerCase()
+                        .replace(/\s+/g, "-");
+
+                sessionStorage.setItem(
+                    "arima_selected_application",
+                    selectedApplication
+                );
+
+            }
+
+
+            options.forEach(option => {
+
+                option.setAttribute(
+                    "role",
+                    "button"
+                );
+
+                option.setAttribute(
+                    "tabindex",
+                    "0"
+                );
+
+                option.setAttribute(
+                    "aria-selected",
+                    option.classList.contains("active")
+                        ? "true"
+                        : "false"
+                );
+
+
+                option.addEventListener(
+                    "click",
+                    function () {
+
+                        selectApplication(this);
+
+                    }
+                );
+
+
+                option.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Enter" ||
+                            event.key === " "
+                        ) {
+
+                            event.preventDefault();
+
+                            selectApplication(this);
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+            /* Read initially active option */
+
+            const activeOption =
+                calculatorDemo.querySelector(
+                    ".demo-option.active"
+                );
+
+            if (activeOption) {
+
+                const name =
+                    activeOption.textContent.trim();
+
+                selectedApplication =
+                    applicationMap[name]
+                    || "swimming-pool";
+
+            }
+
+
+            /* NEXT STEP */
+
+            if (nextButton) {
+
+                /*
+                 Remove old hardcoded inline navigation
+                */
+
+                nextButton.removeAttribute(
+                    "onclick"
+                );
+
+
+                nextButton.addEventListener(
+                    "click",
+                    function () {
+
+                        sessionStorage.setItem(
+                            "arima_selected_application",
+                            selectedApplication
+                        );
+
+                        window.location.href =
+                            "dosage-calculator.html?application=" +
+                            encodeURIComponent(
+                                selectedApplication
+                            );
+
+                    }
+                );
+
+            }
+
+        });
+
+    </script>
+
+
+
+
+
+    <script src="assets/js/auth-nav.js?v=20261007-account1" defer></script>
+  <script defer src="assets/js/arima-premium-products.js?v=20261014-pages3"></script>
+
+
+<script defer src="assets/js/arima-v8-premium.js?v=8"></script>
+<script defer src="assets/js/arima-v7.js?v=20261014-restore"></script>
+
+<!-- ARIMA NAVBAR ACTIVE FIX V2 START -->
+<script>
+(function () {
+    "use strict";
+
+    const sections = [
+        "home",
+        "about",
+        "products",
+        "applications",
+        "industries",
+        "contact"
+    ];
+
+    function getPage() {
+        const path = decodeURIComponent(
+            window.location.pathname
+        ).toLowerCase();
+
+        const filename = path.split("/").pop();
+
+        if (
+            path.includes("/product-pages/") ||
+            filename === "products.html"
+        ) {
+            return "products";
+        }
+
+        if (filename === "dosage-calculator.html") {
+            return "calculator";
+        }
+
+        if (filename === "login.html") {
+            return "login";
+        }
+
+        if (filename === "index.html" || filename === "") {
+            return "home";
+        }
+
+        return "";
+    }
+
+    function activate(name) {
+        document.querySelectorAll(".nav-link").forEach(link => {
+            const href = (
+                link.getAttribute("href") || ""
+            ).toLowerCase();
+
+            const target = href.includes("#")
+                ? href.split("#").pop()
+                : "";
+
+            const active = target === name && !!name;
+
+            link.classList.toggle("active", active);
+
+            if (active) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+
+        document.querySelectorAll(
+            ".nav-calculator, .nav-login"
+        ).forEach(link => {
+            const active =
+                (name === "calculator" &&
+                 link.classList.contains("nav-calculator")) ||
+                (name === "login" &&
+                 link.classList.contains("nav-login"));
+
+            link.classList.toggle("active", active);
+
+            if (active) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    }
+
+    function updateHome() {
+        let active = "home";
+
+        const header = document.querySelector("header");
+        const offset = header
+            ? header.getBoundingClientRect().height + 120
+            : 200;
+
+        sections.forEach(id => {
+            const section = document.getElementById(id);
+
+            if (
+                section &&
+                section.getBoundingClientRect().top <= offset
+            ) {
+                active = id;
+            }
+        });
+
+        activate(active);
+    }
+
+    function init() {
+        const page = getPage();
+
+        if (page !== "home") {
+            activate(page);
+            return;
+        }
+
+        updateHome();
+
+        let scheduled = false;
+
+        window.addEventListener("scroll", function () {
+            if (scheduled) return;
+
+            scheduled = true;
+
+            requestAnimationFrame(function () {
+                scheduled = false;
+                updateHome();
+            });
+        }, { passive: true });
+
+        window.addEventListener("hashchange", function () {
+            setTimeout(updateHome, 100);
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
+    }
+})();
+</script>
+<!-- ARIMA NAVBAR ACTIVE FIX V2 END -->
+</body>
+
+</html>
+
+

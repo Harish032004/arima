@@ -1,0 +1,2683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Login to Arima Chemical dosage workspace and customer account.">
+
+<title>Login | Arima Chemical</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+:root{
+    --navy:#03192b;
+    --navy2:#073657;
+    --blue:#0878ee;
+    --cyan:#16c8df;
+    --teal:#14bcae;
+    --text:#0a2340;
+    --muted:#687b8e;
+    --border:#d7e5ee;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background:#041b2e;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.login-page{
+    position:relative;
+
+    min-height:100svh;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,23,41,.94) 0%,
+            rgba(4,43,70,.87) 40%,
+            rgba(6,61,92,.55) 70%,
+            rgba(3,37,59,.24) 100%
+        ),
+        url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=2200&q=90")
+        center center / cover
+        no-repeat;
+}
+
+.login-page::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            rgba(36,194,235,.17),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(12,157,226,.20),
+            transparent 25%
+        );
+
+    pointer-events:none;
+}
+
+.login-page::after{
+    content:"";
+
+    position:absolute;
+
+    left:-8%;
+    right:-8%;
+    bottom:-185px;
+
+    height:390px;
+
+    border-radius:
+        50% 50% 0 0 /
+        24% 34% 0 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(22,196,234,.19),
+            rgba(2,74,130,.50)
+        );
+
+    border-top:
+        1px solid
+        rgba(120,230,255,.30);
+
+    transform:rotate(-2deg);
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   TOP BRAND
+========================================================= */
+
+.top-brand{
+    position:absolute;
+
+    top:28px;
+    left:clamp(28px,6vw,90px);
+
+    z-index:20;
+
+    display:flex;
+    align-items:center;
+
+    gap:14px;
+}
+
+.top-brand-logo{
+    width:118px;
+
+    padding:7px 11px;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.97);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.13);
+}
+
+.top-brand-logo img{
+    display:block;
+    width:100%;
+    object-fit:contain;
+}
+
+.top-brand-name{
+    color:#fff;
+
+    font-size:19px;
+    font-weight:800;
+
+    letter-spacing:-.3px;
+}
+
+.top-tagline{
+    position:absolute;
+
+    top:37px;
+    right:clamp(30px,6vw,92px);
+
+    z-index:20;
+
+    display:flex;
+    align-items:center;
+
+    gap:17px;
+
+    color:
+        rgba(255,255,255,.67);
+
+    font-size:9px;
+    font-weight:800;
+
+    letter-spacing:2.7px;
+
+    text-transform:uppercase;
+}
+
+.top-tagline::after{
+    content:"";
+
+    width:50px;
+    height:1px;
+
+    background:
+        rgba(255,255,255,.45);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.login-shell{
+    position:relative;
+
+    z-index:10;
+
+    width:min(calc(100% - 70px),1450px);
+
+    margin:auto;
+
+    padding:
+        118px 0
+        60px;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,.95fr)
+        minmax(500px,.75fr);
+
+    gap:75px;
+
+    align-items:center;
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.login-copy{
+    max-width:670px;
+}
+
+.login-eyebrow{
+    margin-bottom:20px;
+
+    color:#9aeafd;
+
+    font-size:10px;
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+.login-copy h1{
+    max-width:650px;
+
+    color:#fff;
+
+    font-size:
+        clamp(
+            48px,
+            5vw,
+            76px
+        );
+
+    line-height:1.02;
+
+    letter-spacing:-3px;
+
+    font-weight:800;
+}
+
+.login-copy > p{
+    max-width:610px;
+
+    margin-top:22px;
+
+    color:
+        rgba(255,255,255,.74);
+
+    font-size:17px;
+
+    line-height:1.75;
+}
+
+.login-features{
+    display:flex;
+
+    align-items:flex-start;
+
+    margin-top:44px;
+}
+
+.login-feature{
+    min-width:160px;
+
+    padding:
+        0 28px;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.18);
+}
+
+.login-feature:first-child{
+    padding-left:0;
+}
+
+.login-feature:last-child{
+    border-right:0;
+}
+
+.login-feature-icon{
+    width:54px;
+    height:54px;
+
+    margin-bottom:13px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    background:
+        rgba(25,151,218,.20);
+
+    border:
+        1px solid
+        rgba(85,211,242,.18);
+
+    color:#66e5f5;
+
+    font-size:19px;
+
+    transition:
+        transform .35s ease,
+        background .35s ease;
+}
+
+.login-feature:hover
+.login-feature-icon{
+    transform:
+        translateY(-5px);
+
+    background:
+        rgba(25,183,223,.30);
+}
+
+.login-feature span{
+    color:
+        rgba(255,255,255,.88);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    line-height:1.45;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.login-card-wrap{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.login-card{
+    position:relative;
+
+    width:min(100%,520px);
+
+    padding:
+        34px 38px
+        30px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:
+        rgba(249,253,255,.96);
+
+    border:
+        1px solid
+        rgba(255,255,255,.75);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+    box-shadow:
+        0 32px 85px
+        rgba(0,27,51,.30),
+
+        inset 0 1px 0
+        rgba(255,255,255,.85);
+
+    color:var(--text);
+}
+
+.login-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:290px;
+    height:290px;
+
+    right:-135px;
+    top:-135px;
+
+    border-radius:
+        44% 56% 57% 43% /
+        52% 46% 54% 48%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8,120,238,.07),
+            rgba(22,200,223,.045)
+        );
+
+    pointer-events:none;
+}
+
+.login-card::after{
+    content:"";
+
+    position:absolute;
+
+    left:-90px;
+    bottom:-170px;
+
+    width:340px;
+    height:260px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(8,120,238,.06);
+
+    pointer-events:none;
+}
+
+
+/* BRAND INSIDE CARD */
+
+.card-brand{
+    position:relative;
+    z-index:3;
+
+    display:flex;
+    align-items:center;
+
+    gap:13px;
+
+    margin-bottom:24px;
+}
+
+.card-brand img{
+    width:96px;
+    object-fit:contain;
+}
+
+.card-brand span{
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:-.4px;
+}
+
+
+/* HEAD */
+
+.login-card h2{
+    position:relative;
+    z-index:3;
+
+    color:#081f3e;
+
+    font-size:
+        clamp(
+            34px,
+            3vw,
+            47px
+        );
+
+    line-height:1;
+
+    letter-spacing:-1.7px;
+
+    font-weight:800;
+}
+
+.login-card-subtitle{
+    position:relative;
+    z-index:3;
+
+    max-width:410px;
+
+    margin-top:13px;
+
+    color:#6b7d90;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+/* MESSAGE */
+
+.login-message{
+    display:none;
+
+    position:relative;
+    z-index:4;
+
+    margin-top:17px;
+
+    padding:
+        11px 13px;
+
+    border-radius:11px;
+
+    font-size:10px;
+
+    line-height:1.55;
+}
+
+.login-message.error{
+    display:block;
+
+    color:#b3343a;
+
+    background:#fff0f1;
+
+    border:
+        1px solid
+        #ffdadd;
+}
+
+.login-message.success{
+    display:block;
+
+    color:#087b67;
+
+    background:#eaf9f4;
+
+    border:
+        1px solid
+        #cfefe5;
+}
+
+
+/* FORM */
+
+.login-form{
+    position:relative;
+    z-index:3;
+
+    margin-top:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+
+    margin-bottom:7px;
+
+    color:#324b62;
+
+    font-size:10.5px;
+    font-weight:800;
+}
+
+.input-wrap{
+    position:relative;
+}
+
+.input-icon{
+    position:absolute;
+
+    top:50%;
+    left:15px;
+
+    transform:
+        translateY(-50%);
+
+    color:#8193a4;
+
+    font-size:14px;
+
+    pointer-events:none;
+}
+
+.form-control{
+    width:100%;
+    height:53px;
+
+    padding:
+        0 47px
+        0 43px;
+
+    border:
+        1px solid
+        #ccdae5;
+
+    border-radius:13px;
+
+    outline:0;
+
+    background:
+        rgba(250,253,255,.92);
+
+    color:#102d48;
+
+    font-size:12px;
+    font-weight:600;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.form-control::placeholder{
+    color:#9aa9b5;
+    font-weight:500;
+}
+
+.form-control:focus{
+    border-color:#0878ee;
+
+    background:#fff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(8,120,238,.08);
+}
+
+.password-toggle{
+    position:absolute;
+
+    top:50%;
+    right:11px;
+
+    transform:
+        translateY(-50%);
+
+    width:34px;
+    height:34px;
+
+    border:0;
+    border-radius:8px;
+
+    display:grid;
+    place-items:center;
+
+    background:transparent;
+
+    color:#7b8f9f;
+
+    cursor:pointer;
+
+    transition:
+        color .3s ease,
+        background .3s ease;
+}
+
+.password-toggle:hover{
+    color:#0878ee;
+
+    background:#edf6fc;
+}
+
+
+/* FORGOT */
+
+.login-options{
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:-4px;
+
+    margin-bottom:20px;
+}
+
+.forgot-link{
+    color:#0878ee;
+
+    font-size:10.5px;
+
+    font-weight:800;
+}
+
+.forgot-link:hover{
+    text-decoration:underline;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn{
+    position:relative;
+
+    width:100%;
+    height:55px;
+
+    border:0;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #075fc9 0%,
+            #0878ee 42%,
+            #19c8d7 100%
+        );
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 15px 32px
+        rgba(8,120,238,.24);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.login-btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+    left:-40%;
+
+    width:28%;
+    height:300%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.34),
+            transparent
+        );
+
+    transform:rotate(22deg);
+
+    transition:left .6s ease;
+}
+
+.login-btn:hover::before{
+    left:130%;
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(8,120,238,.31);
+}
+
+.login-btn:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+    transform:none;
+}
+
+.login-btn span{
+    position:relative;
+    z-index:2;
+}
+
+.login-btn .arrow{
+    position:absolute;
+
+    right:21px;
+
+    z-index:2;
+}
+
+
+/* REGISTER */
+
+.register-line{
+    position:relative;
+    z-index:3;
+
+    margin-top:21px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    color:#7b8997;
+
+    font-size:10px;
+}
+
+.register-line::before,
+.register-line::after{
+    content:"";
+
+    width:37px;
+    height:1px;
+
+    background:#dce6ed;
+}
+
+.register-line a{
+    color:#0878ee;
+    font-weight:800;
+}
+
+
+/* SECURITY */
+
+.security-card{
+    position:relative;
+    z-index:3;
+
+    margin-top:22px;
+
+    padding:
+        14px 16px;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.87),
+            rgba(242,249,252,.90)
+        );
+
+    border:
+        1px solid
+        #dae7ef;
+}
+
+.security-icon{
+    width:38px;
+    height:38px;
+
+    flex-shrink:0;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16b79d,
+            #21cfb4
+        );
+
+    color:#fff;
+}
+
+.security-card strong{
+    display:block;
+
+    color:#1c384d;
+
+    font-size:10px;
+}
+
+.security-card span{
+    display:block;
+
+    margin-top:2px;
+
+    color:#80909e;
+
+    font-size:8.5px;
+}
+
+
+/* =========================================================
+   MOLECULES
+========================================================= */
+
+.molecule-scene{
+    position:absolute;
+
+    top:88px;
+    right:-40px;
+
+    width:290px;
+    height:290px;
+
+    opacity:.55;
+
+    pointer-events:none;
+}
+
+.mol-dot{
+    position:absolute;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #d1f8ff 0%,
+            #2dbde0 28%,
+            #075a88 62%,
+            #042f50 100%
+        );
+
+    border:
+        1px solid
+        rgba(208,249,255,.6);
+
+    box-shadow:
+        0 12px 25px
+        rgba(2,36,65,.25);
+}
+
+.mol-dot.small{
+    width:27px;
+    height:27px;
+}
+
+.mol-dot.d1{
+    right:62px;
+    top:82px;
+}
+
+.mol-dot.d2{
+    right:7px;
+    top:28px;
+}
+
+.mol-dot.d3{
+    right:0;
+    top:145px;
+}
+
+.mol-dot.d4{
+    right:118px;
+    top:37px;
+}
+
+.mol-line{
+    position:absolute;
+
+    height:2px;
+
+    background:
+        rgba(116,223,245,.7);
+
+    transform-origin:left center;
+}
+
+.mol-line.l1{
+    width:90px;
+
+    right:50px;
+    top:99px;
+
+    transform:rotate(-39deg);
+}
+
+.mol-line.l2{
+    width:77px;
+
+    right:55px;
+    top:108px;
+
+    transform:rotate(30deg);
+}
+
+.mol-line.l3{
+    width:85px;
+
+    right:125px;
+    top:59px;
+
+    transform:rotate(25deg);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+    .login-shell{
+        grid-template-columns:
+            .9fr
+            minmax(440px,.8fr);
+
+        gap:45px;
+    }
+
+    .login-copy h1{
+        font-size:54px;
+    }
+
+    .login-feature{
+        min-width:130px;
+        padding:0 18px;
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    .login-page{
+        align-items:flex-start;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(3,27,48,.93),
+                rgba(3,43,69,.80)
+            ),
+            url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1500&q=88")
+            center / cover;
+    }
+
+    .top-brand{
+        top:18px;
+        left:18px;
+    }
+
+    .top-brand-logo{
+        width:108px;
+    }
+
+    .top-brand-name,
+    .top-tagline{
+        display:none;
+    }
+
+    .login-shell{
+        width:min(calc(100% - 28px),720px);
+
+        padding:
+            105px 0
+            45px;
+
+        grid-template-columns:1fr;
+
+        gap:42px;
+    }
+
+    .login-copy{
+        max-width:100%;
+    }
+
+    .login-copy h1{
+        font-size:
+            clamp(
+                42px,
+                8vw,
+                62px
+            );
+    }
+
+    .login-features{
+        max-width:560px;
+    }
+
+    .login-card-wrap{
+        justify-content:center;
+    }
+
+    .login-card{
+        width:100%;
+        max-width:620px;
+    }
+
+    .molecule-scene{
+        opacity:.3;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .top-brand{
+        top:14px;
+        left:14px;
+    }
+
+    .top-brand-logo{
+        width:120px;
+    }
+
+    .login-shell{
+        width:calc(100% - 20px);
+
+        padding:
+            95px 0
+            30px;
+
+        gap:28px;
+    }
+
+    .login-eyebrow{
+        margin-bottom:13px;
+        font-size:8px;
+    }
+
+    .login-copy h1{
+        font-size:39px;
+        line-height:1.03;
+        letter-spacing:-1.8px;
+    }
+
+    .login-copy > p{
+        margin-top:14px;
+        font-size:13px;
+    }
+
+    .login-features{
+        display:grid;
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+        margin-top:28px;
+    }
+
+    .login-feature{
+        min-width:0;
+
+        padding:0 8px;
+
+        text-align:center;
+    }
+
+    .login-feature:first-child{
+        padding-left:0;
+    }
+
+    .login-feature-icon{
+        width:43px;
+        height:43px;
+
+        margin:
+            0 auto
+            9px;
+    }
+
+    .login-feature span{
+        font-size:8.5px;
+    }
+
+    .login-card{
+        padding:
+            25px 17px
+            21px;
+
+        border-radius:21px;
+    }
+
+    .card-brand{
+        margin-bottom:18px;
+    }
+
+    .card-brand img{
+        width:82px;
+    }
+
+    .card-brand span{
+        font-size:15px;
+    }
+
+    .login-card h2{
+        font-size:34px;
+        letter-spacing:-1px;
+    }
+
+    .login-card-subtitle{
+        font-size:10.5px;
+    }
+
+    .form-control{
+        height:50px;
+    }
+
+    .register-line{
+        flex-wrap:wrap;
+        text-align:center;
+    }
+
+    .register-line::before,
+    .register-line::after{
+        display:none;
+    }
+
+    .molecule-scene{
+        display:none;
+    }
+
+}
+
+</style>
+
+<style id="arima-login-compact-fix">
+
+/* =========================================================
+   LOGIN PAGE - ONE SCREEN COMPACT FIX
+========================================================= */
+
+html,
+body{
+    height:100% !important;
+}
+
+body{
+    overflow:hidden !important;
+}
+
+.login-page{
+    height:100svh !important;
+    min-height:100svh !important;
+
+    overflow:hidden !important;
+
+    display:flex !important;
+    align-items:center !important;
+}
+
+
+/* =========================================================
+   REMOVE WHITE BACKGROUND FROM LOGO
+========================================================= */
+
+.top-brand-logo{
+    width:145px !important;
+
+    padding:0 !important;
+
+    background:transparent !important;
+
+    border-radius:0 !important;
+
+    box-shadow:none !important;
+}
+
+.top-brand-logo img{
+    width:100% !important;
+
+    height:auto !important;
+
+    object-fit:contain !important;
+
+    background:transparent !important;
+}
+
+
+/* card logo also remains transparent */
+
+.card-brand img{
+    background:transparent !important;
+
+    padding:0 !important;
+
+    border-radius:0 !important;
+
+    box-shadow:none !important;
+}
+
+
+/* =========================================================
+   TOP AREA
+========================================================= */
+
+.top-brand{
+    top:18px !important;
+}
+
+.top-tagline{
+    top:27px !important;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.login-shell{
+    width:min(calc(100% - 60px),1380px) !important;
+
+    height:100svh !important;
+
+    padding:
+        78px 0
+        20px !important;
+
+    display:grid !important;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(430px,500px) !important;
+
+    gap:55px !important;
+
+    align-items:center !important;
+}
+
+
+/* =========================================================
+   LEFT SIDE COMPACT
+========================================================= */
+
+.login-copy{
+    max-width:620px !important;
+}
+
+.login-eyebrow{
+    margin-bottom:14px !important;
+
+    font-size:9px !important;
+}
+
+.login-copy h1{
+    font-size:
+        clamp(
+            44px,
+            4.2vw,
+            64px
+        ) !important;
+
+    line-height:1 !important;
+
+    letter-spacing:-2.5px !important;
+}
+
+.login-copy > p{
+    max-width:560px !important;
+
+    margin-top:15px !important;
+
+    font-size:14px !important;
+
+    line-height:1.6 !important;
+}
+
+.login-features{
+    margin-top:25px !important;
+}
+
+.login-feature{
+    min-width:135px !important;
+
+    padding:
+        0 20px !important;
+}
+
+.login-feature-icon{
+    width:46px !important;
+    height:46px !important;
+
+    margin-bottom:9px !important;
+
+    font-size:16px !important;
+}
+
+.login-feature span{
+    font-size:9.5px !important;
+
+    line-height:1.35 !important;
+}
+
+
+/* =========================================================
+   LOGIN CARD COMPACT
+========================================================= */
+
+.login-card{
+    width:100% !important;
+    max-width:480px !important;
+
+    padding:
+        24px 28px
+        22px !important;
+
+    border-radius:24px !important;
+}
+
+.card-brand{
+    margin-bottom:15px !important;
+}
+
+.card-brand img{
+    width:82px !important;
+}
+
+.card-brand span{
+    font-size:16px !important;
+}
+
+.login-card h2{
+    font-size:
+        clamp(
+            31px,
+            2.6vw,
+            40px
+        ) !important;
+
+    letter-spacing:-1.2px !important;
+}
+
+.login-card-subtitle{
+    margin-top:8px !important;
+
+    font-size:10.5px !important;
+
+    line-height:1.55 !important;
+}
+
+.login-form{
+    margin-top:17px !important;
+}
+
+.form-group{
+    margin-bottom:13px !important;
+}
+
+.form-group label{
+    margin-bottom:5px !important;
+
+    font-size:9.5px !important;
+}
+
+.form-control{
+    height:46px !important;
+
+    border-radius:11px !important;
+
+    font-size:11px !important;
+}
+
+.login-options{
+    margin-top:-2px !important;
+
+    margin-bottom:13px !important;
+}
+
+.forgot-link{
+    font-size:9.5px !important;
+}
+
+.login-btn{
+    height:48px !important;
+
+    border-radius:12px !important;
+
+    font-size:12px !important;
+}
+
+.register-line{
+    margin-top:15px !important;
+
+    font-size:9px !important;
+}
+
+.security-card{
+    margin-top:15px !important;
+
+    padding:
+        10px 13px !important;
+
+    border-radius:12px !important;
+}
+
+.security-icon{
+    width:34px !important;
+    height:34px !important;
+}
+
+.security-card strong{
+    font-size:9px !important;
+}
+
+.security-card span{
+    font-size:7.8px !important;
+}
+
+
+/* =========================================================
+   SHORT LAPTOP SCREEN
+========================================================= */
+
+@media(min-width:901px) and (max-height:780px){
+
+    .top-brand{
+        top:12px !important;
+    }
+
+    .top-tagline{
+        top:21px !important;
+    }
+
+    .login-shell{
+        padding:
+            60px 0
+            12px !important;
+    }
+
+    .login-copy h1{
+        font-size:
+            clamp(
+                40px,
+                4vw,
+                56px
+            ) !important;
+    }
+
+    .login-copy > p{
+        margin-top:12px !important;
+
+        font-size:12.5px !important;
+    }
+
+    .login-features{
+        margin-top:18px !important;
+    }
+
+    .login-card{
+        padding:
+            20px 25px
+            18px !important;
+    }
+
+    .card-brand{
+        margin-bottom:11px !important;
+    }
+
+    .login-card h2{
+        font-size:32px !important;
+    }
+
+    .login-card-subtitle{
+        margin-top:6px !important;
+    }
+
+    .login-form{
+        margin-top:13px !important;
+    }
+
+    .form-group{
+        margin-bottom:10px !important;
+    }
+
+    .form-control{
+        height:43px !important;
+    }
+
+    .login-btn{
+        height:45px !important;
+    }
+
+    .security-card{
+        margin-top:11px !important;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    body{
+        overflow:auto !important;
+    }
+
+    .login-page{
+        height:auto !important;
+        min-height:100svh !important;
+
+        overflow:visible !important;
+    }
+
+    .top-brand-logo{
+        width:128px !important;
+    }
+
+    .login-shell{
+        width:min(calc(100% - 28px),680px) !important;
+
+        height:auto !important;
+
+        min-height:100svh !important;
+
+        padding:
+            82px 0
+            26px !important;
+
+        grid-template-columns:1fr !important;
+
+        gap:24px !important;
+    }
+
+    .login-copy{
+        max-width:100% !important;
+    }
+
+    .login-copy h1{
+        font-size:43px !important;
+    }
+
+    .login-features{
+        margin-top:20px !important;
+    }
+
+    .login-card-wrap{
+        justify-content:center !important;
+    }
+
+    .login-card{
+        max-width:600px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE - LOGIN CARD ONLY SO IT FITS ONE SCREEN
+========================================================= */
+
+@media(max-width:600px){
+
+    body{
+        overflow:hidden !important;
+    }
+
+    .login-page{
+        height:100svh !important;
+        min-height:100svh !important;
+
+        overflow:hidden !important;
+
+        align-items:center !important;
+    }
+
+    .top-brand{
+        top:10px !important;
+        left:14px !important;
+    }
+
+    .top-brand-logo{
+        width:125px !important;
+    }
+
+    .login-shell{
+        width:calc(100% - 20px) !important;
+
+        height:100svh !important;
+        min-height:100svh !important;
+
+        padding:
+            72px 0
+            14px !important;
+
+        display:flex !important;
+
+        align-items:center !important;
+        justify-content:center !important;
+    }
+
+
+    /* Hide marketing area on small mobile */
+    .login-copy{
+        display:none !important;
+    }
+
+    .login-card-wrap{
+        width:100% !important;
+
+        display:flex !important;
+
+        justify-content:center !important;
+    }
+
+    .login-card{
+        width:100% !important;
+
+        max-width:440px !important;
+
+        padding:
+            20px 16px
+            17px !important;
+
+        border-radius:19px !important;
+    }
+
+    .card-brand{
+        margin-bottom:11px !important;
+    }
+
+    .card-brand img{
+        width:76px !important;
+    }
+
+    .card-brand span{
+        font-size:14px !important;
+    }
+
+    .login-card h2{
+        font-size:30px !important;
+    }
+
+    .login-card-subtitle{
+        margin-top:6px !important;
+
+        font-size:9.5px !important;
+    }
+
+    .login-message{
+        margin-top:10px !important;
+
+        padding:
+            8px 10px !important;
+    }
+
+    .login-form{
+        margin-top:13px !important;
+    }
+
+    .form-group{
+        margin-bottom:10px !important;
+    }
+
+    .form-control{
+        height:44px !important;
+    }
+
+    .login-options{
+        margin-bottom:10px !important;
+    }
+
+    .login-btn{
+        height:45px !important;
+    }
+
+    .register-line{
+        margin-top:12px !important;
+    }
+
+    .security-card{
+        margin-top:12px !important;
+
+        padding:
+            9px 11px !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SHORT MOBILE
+========================================================= */
+
+@media(max-width:600px) and (max-height:700px){
+
+    .top-brand-logo{
+        width:105px !important;
+    }
+
+    .login-shell{
+        padding-top:58px !important;
+    }
+
+    .card-brand{
+        margin-bottom:8px !important;
+    }
+
+    .login-card h2{
+        font-size:27px !important;
+    }
+
+    .login-card-subtitle{
+        display:none !important;
+    }
+
+    .security-card{
+        display:none !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+<main class="login-page">
+
+
+    <!-- TOP BRAND -->
+
+    <a href="index.html"
+       class="top-brand">
+
+        <div class="top-brand-logo">
+
+            <img
+                src="assets/images/arima-logo.png"
+                alt="Arima Chemical">
+
+        </div>
+
+        <span class="top-brand-name">
+            Arima Chemical
+        </span>
+
+    </a>
+
+
+    <div class="top-tagline">
+        Chemistry for a Cleaner Tomorrow
+    </div>
+
+
+    <!-- MOLECULE GRAPHIC -->
+
+    <div class="molecule-scene">
+
+        <span class="mol-dot d1"></span>
+        <span class="mol-dot small d2"></span>
+        <span class="mol-dot small d3"></span>
+        <span class="mol-dot small d4"></span>
+
+        <span class="mol-line l1"></span>
+        <span class="mol-line l2"></span>
+        <span class="mol-line l3"></span>
+
+    </div>
+
+
+    <div class="login-shell">
+
+
+        <!-- =====================================================
+             LEFT SIDE
+        ====================================================== -->
+
+        <section class="login-copy">
+
+            <div class="login-eyebrow">
+                Water Treatment Solutions
+            </div>
+
+
+            <h1>
+                Cleaner Water
+                <br>
+                Brighter Possibilities
+            </h1>
+
+
+            <p>
+                Advanced chemical solutions for a safer,
+                cleaner and more sustainable world.
+            </p>
+
+
+            <div class="login-features">
+
+
+                <div class="login-feature">
+
+                    <div class="login-feature-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <span>
+                        Optimized
+                        <br>
+                        Treatment
+                    </span>
+
+                </div>
+
+
+                <div class="login-feature">
+
+                    <div class="login-feature-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <span>
+                        Proven
+                        <br>
+                        Chemistry
+                    </span>
+
+                </div>
+
+
+                <div class="login-feature">
+
+                    <div class="login-feature-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+                    <span>
+                        A More
+                        <br>
+                        Sustainable
+                        Tomorrow
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOGIN CARD
+        ====================================================== -->
+
+        <section class="login-card-wrap">
+
+
+            <div class="login-card">
+
+
+                <div class="card-brand">
+
+                    <img
+                        src="assets/images/arima-logo.png"
+                        alt="Arima Chemical">
+
+                    <span>
+                        Arima Chemical
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+
+                <p class="login-card-subtitle">
+
+                    Log in to access your dosage workspace,
+                    calculation history and account settings.
+
+                </p>
+
+
+                <div
+                    id="loginMessage"
+                    class="login-message">
+                </div>
+
+
+                <form
+                    class="login-form"
+                    id="loginForm">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="identity">
+                            Email or phone
+                        </label>
+
+                        <div class="input-wrap">
+
+                            <i class="fa-regular fa-envelope input-icon"></i>
+
+                            <input
+                                id="identity"
+                                class="form-control"
+                                type="text"
+                                placeholder="you@example.com or phone"
+                                autocomplete="username"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-wrap">
+
+                            <i class="fa-solid fa-lock input-icon"></i>
+
+                            <input
+                                id="password"
+                                class="form-control"
+                                type="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required>
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="login-options">
+
+                        <a
+                            href="#"
+                            class="forgot-link"
+                            id="forgotLink">
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                        id="loginButton">
+
+                        <span id="loginButtonText">
+                            Login
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right arrow"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <div class="register-line">
+
+                    <span>
+                        New to Arima Chemical?
+                    </span>
+
+                    <a href="dosage-calculator.html">
+                        Create an Account
+                    </a>
+
+                </div>
+
+
+                <div class="security-card">
+
+                    <div class="security-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Secure & Encrypted
+                        </strong>
+
+                        <span>
+                            Your data is protected using secure authentication.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- ARIMA_LOGIN_API_BRIDGE_START -->
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+
+<!-- ARIMA_LOGIN_API_BRIDGE_END -->
+<script>
+
+/* =========================================================
+   API
+========================================================= */
+
+const API_BASE =
+    localStorage.getItem("arima_api_base")
+    || "http://localhost:8080/api";
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+const passwordInput =
+    document.getElementById("password");
+
+const passwordToggle =
+    document.getElementById("passwordToggle");
+
+
+passwordToggle.addEventListener(
+    "click",
+    function () {
+
+        const isPassword =
+            passwordInput.type === "password";
+
+        passwordInput.type =
+            isPassword
+                ? "text"
+                : "password";
+
+        this.innerHTML =
+            isPassword
+                ? '<i class="fa-regular fa-eye-slash"></i>'
+                : '<i class="fa-regular fa-eye"></i>';
+
+    }
+);
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+function showMessage(
+    message,
+    type = "error"
+) {
+
+    const el =
+        document.getElementById(
+            "loginMessage"
+        );
+
+    el.textContent = message;
+
+    el.className =
+        "login-message " + type;
+
+}
+
+
+/* =========================================================
+   REDIRECT
+========================================================= */
+
+function redirectUser(
+    role
+) {
+
+    const normalizedRole =
+        String(role || "")
+            .toUpperCase();
+
+
+    if (
+        normalizedRole.includes(
+            "ADMIN"
+        )
+    ) {
+
+        window.location.href =
+            "admin.html";
+
+        return;
+
+    }
+
+
+    window.location.href =
+        "customer.html";
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+document
+    .getElementById("loginForm")
+    .addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+
+            const identity =
+                document
+                    .getElementById(
+                        "identity"
+                    )
+                    .value
+                    .trim();
+
+
+            const password =
+                passwordInput.value;
+
+
+            const button =
+                document.getElementById(
+                    "loginButton"
+                );
+
+
+            const buttonText =
+                document.getElementById(
+                    "loginButtonText"
+                );
+
+
+            if (
+                !identity ||
+                !password
+            ) {
+
+                showMessage(
+                    "Please enter your email / phone and password."
+                );
+
+                return;
+
+            }
+
+
+            button.disabled = true;
+
+            buttonText.textContent =
+                "Signing in...";
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        API_BASE +
+                        "/auth/login",
+                        {
+                            method:"POST",
+
+                            headers:{
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body:
+                                JSON.stringify({
+                                    identity,
+                                    password
+                                })
+                        }
+                    );
+
+
+                let data = {};
+
+
+                try {
+
+                    data =
+                        await response.json();
+
+                }
+                catch (_) {}
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        data.message ||
+                        data.error ||
+                        "Invalid email/phone or password."
+                    );
+
+                }
+
+
+                const token =
+                    data.token ||
+                    data.accessToken ||
+                    data.jwt;
+
+
+                if (!token) {
+
+                    throw new Error(
+                        "Login succeeded but authentication token was not returned."
+                    );
+
+                }
+
+
+                /*
+                 Store common token keys so existing
+                 Arima pages can read the session.
+                */
+
+                /* ARIMA_LOGIN_SESSION_SYNC_START */
+
+                /*
+                 IMPORTANT:
+                 Keep Login + Calculator on the SAME
+                 authentication storage system.
+                */
+
+                if (
+                    typeof Api !== "undefined" &&
+                    typeof Api.saveAuth === "function"
+                ) {
+
+                    try {
+
+                        Api.saveAuth(data);
+
+                        console.log(
+                            "Arima API authentication session synchronized."
+                        );
+
+                    }
+                    catch (syncError) {
+
+                        console.warn(
+                            "Api.saveAuth sync warning:",
+                            syncError
+                        );
+
+                    }
+
+                }
+
+
+                /*
+                 Keep compatibility keys for navbar,
+                 profile and customer dashboard.
+                */
+
+                localStorage.setItem(
+                    "arima_role",
+                    String(
+                        data.role ||
+                        data.user?.role ||
+                        "CUSTOMER"
+                    )
+                    .replace(
+                        /^ROLE_/i,
+                        ""
+                    )
+                    .toUpperCase()
+                );
+
+
+                const currentArimaUser = {
+
+                    fullName:
+                        data.fullName ||
+                        data.user?.fullName ||
+                        data.user?.name ||
+                        "",
+
+                    email:
+                        data.email ||
+                        data.user?.email ||
+                        identity ||
+                        "",
+
+                    phone:
+                        data.phone ||
+                        data.user?.phone ||
+                        "",
+
+                    role:
+                        String(
+                            data.role ||
+                            data.user?.role ||
+                            "CUSTOMER"
+                        )
+                        .replace(
+                            /^ROLE_/i,
+                            ""
+                        )
+                        .toUpperCase()
+                };
+
+
+                localStorage.setItem(
+                    "arima_user",
+                    JSON.stringify(
+                        currentArimaUser
+                    )
+                );
+
+/* ARIMA_LOGIN_SESSION_SYNC_END */
+
+localStorage.setItem(
+                    "arima_token",
+                    token
+                );
+
+                localStorage.setItem(
+                    "token",
+                    token
+                );
+
+                localStorage.setItem(
+                    "authToken",
+                    token
+                );
+
+
+                if (data.user) {
+
+                    localStorage.setItem(
+                        "arima_user",
+                        JSON.stringify(
+                            data.user
+                        )
+                    );
+
+                }
+
+
+                showMessage(
+                    "Login successful. Redirecting...",
+                    "success"
+                );
+
+
+                /*
+                 First try role directly from login response.
+                */
+
+                let role =
+                    data.role ||
+                    data.user?.role ||
+                    data.authority ||
+                    data.user?.authority;
+
+
+                /*
+                 If response does not contain role,
+                 retrieve currently authenticated user.
+                */
+
+                if (!role) {
+
+                    try {
+
+                        const meResponse =
+                            await fetch(
+                                API_BASE +
+                                "/auth/me",
+                                {
+                                    headers:{
+                                        Authorization:
+                                            "Bearer " +
+                                            token
+                                    }
+                                }
+                            );
+
+
+                        if (
+                            meResponse.ok
+                        ) {
+
+                            const me =
+                                await meResponse.json();
+
+
+                            localStorage.setItem(
+                                "arima_user",
+                                JSON.stringify(
+                                    me
+                                )
+                            );
+
+
+                            role =
+                                me.role ||
+                                me.authority ||
+                                me.roles?.[0];
+
+                        }
+
+                    }
+                    catch (_) {}
+
+                }
+
+
+                setTimeout(
+                    function () {
+
+                        redirectUser(
+                            role
+                        );
+
+                    },
+                    500
+                );
+
+            }
+            catch (error) {
+
+                console.error(
+                    "Login error:",
+                    error
+                );
+
+
+                if (
+                    String(error.message)
+                        .toLowerCase()
+                        .includes(
+                            "failed to fetch"
+                        )
+                ) {
+
+                    showMessage(
+                        "Unable to connect to Arima Chemical server. Make sure the backend is running."
+                    );
+
+                }
+                else {
+
+                    showMessage(
+                        error.message ||
+                        "Unable to login."
+                    );
+
+                }
+
+            }
+            finally {
+
+                button.disabled = false;
+
+                buttonText.textContent =
+                    "Login";
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+document
+    .getElementById(
+        "forgotLink"
+    )
+    .addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            showMessage(
+                "Password recovery can be configured with your email service.",
+                "success"
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Sum: <span id="result">0</span></p>
+    <script>
+        // Function to calculate the sum of two numbers
+        function calculateSum(a, b) {
+            return a + b;
+        }
+
+        // Example usage
+        const num1 = 15;
+        const num2 = 10;
+        const sum = calculateSum(num1, num2);
+        //Display the result in the HTML
+        
+        document.getElementById('result').textContent = sum;
+    </script>
+</body>
+</html>
